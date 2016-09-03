@@ -1,0 +1,31 @@
+body{font-family: sans-serif; padding-left: 0.5em; width: 55%;}
+
+h1{font-size: 1.2em; font-weight: normal; padding-left: 0em; padding-top: 0em; margin-top: 0em; margin-left: 0em;}
+h2{font-size: 1.1em; font-weight: normal; padding-left: 0em; margin-left: 0em;}
+h3{font-size: 1em; font-weight: normal; font-style: italic; padding-left: 0em; margin-left: 0em;}
+
+img{border: 1px solid black;}
+
+a{text-decoration: none; color: #0000FF;}
+a:hover{text-decoration: underline;}
+
+p.papersinfo{padding-top: 0em; margin-top: 0em;}
+p.updateinfo{font-size: 0.9em; color: #666666;}
+p.picture{padding-top: 0em; margin-top: 0em;}
+
+tr.picture{vertical-align: top;}
+td.emailaddresses{padding-left: 1em;}
+
+span.italic{font-style: italic;}
+span.bold{font-weight: bold;}
+
+div{height: 1px; background: black; margin-top: 1em; margin-bottom: 1em;}
+
+th{text-align: left; white-space: nowrap;}
+td{white-space: nowrap;}
+table{border-spacing: 1em;}
+
+table.noborderspacing{border-spacing: 0em;}
+
+ul{list-style-type:none; padding-left: 1em;}
+li{margin-bottom: 1em;}
