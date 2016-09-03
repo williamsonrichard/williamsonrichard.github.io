@@ -1,0 +1,384 @@
+\documentclass[12pt]{amsart}
+\usepackage{mathrsfs}
+\usepackage{hyperref}
+\usepackage[totalwidth=480pt,totalheight=680pt]{geometry}
+\usepackage{url}
+\usepackage[all] {xy}
+
+
+\newtheorem{thm}{Theorem}[section]
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{prpn}[thm]{Proposition}
+
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{Definition}
+
+\theoremstyle{remark}
+\newtheorem{rmk}[thm]{Remark}
+
+\theoremstyle{remark}
+\newtheorem{ex}[thm]{Example}
+
+\begin{document}
+\pagestyle{headings}
+
+\title{An $\mathfrak{sl}_{2}$-categorification of tensor products of simple representations of $\mathfrak{sl}_{2}$} 
+\author{Richard Williamson}
+\address{University of Oxford}
+\date{\today}
+\thanks{Supported by the EPSRC}
+\email{\href{mailto: williamson@maths.ox.ac.uk}{\nolinkurl{williamson@maths.ox.ac.uk}}}
+
+\begin{abstract} In \cite{ZhengGeometricCategorificationTensorProducts}, Zheng gave a geometric categorification of tensor products of simple $U_{q}(\mathfrak{sl}_{2})$-modules. We extend his work to a 2-categorical setting, in line with the higher representation theory programme of Rouquier.
+\end{abstract}
+\maketitle
+
+\begin{section}{Introduction}
+
+For any parabolic subgroup $P \subset GL_{n}(\mathbb{C})$, let $\mathcal{D}_{P}(\text{Gr}(i))$ denote the bounded derived category of $P$-smooth constructible $\overline{\mathbb{Q}_{l}}$-sheaves on ${\rm Gr}(i)$. Let $V$ denote a tensor product of simple representations of $\mathfrak{sl}_{2}$. We show that there is an integer $n \geq 0$ and a parabolic $P \subset GL_{n}(\mathbb{C})$ such that $\bigoplus_{i=0}^{n} \mathcal{D}_{P}(\text{Gr}(i))$, equipped with certain natural endofunctors $E$ and $F$, is a triangulated categorification of $V$. This is based on work of Zheng (\cite{ZhengGeometricCategorificationTensorProducts}).
+
+Realising $E$ and $E^{2}$ as Fourier-Mukai transforms, we explain how to define 2-morphisms $X \in \text{End}^{\bullet}(E)$ and $T \in \text{End}^{\bullet}(E^{2})$ using Chern classes of canonical vector bundles. This extends our construction to an $\mathfrak{sl}_{2}$-categorification, in the sense of Chuang and Rouquier (\cite{ChuangRouquierDerivedEquivalencesSymmetricGroupsCategorification}).
+
+Keeping track of the Tate twist, we pass to a categorification of tensor products of simple representations of $U_{q}(\mathfrak{sl}_{2})$. Via Koszul duality, as in \cite{ZhengGeometricCategorificationTensorProducts}, we obtain an abelian categorification of these representations.
+
+Naturally, our results should generalise to the case of highest weight integrable representations of arbitrary quantum groups. Using a notion of micro-local perverse sheaves on quiver varieties, Zheng has shown (\cite{ZhengCategorificationIntegrableRepresentationsQuantumGroups}) how to generalise the weak categorification.
+
+Let $\mathcal{D}^{b}_{P \times \mathbb{C}^{*}}(T^{*}(\text{Gr}(i))\text{-coh})$ denote the bounded derived category of $(P \times \mathbb{C}^{*})$-equivariant coherent sheaves on the cotangent bundle. Via Saito's mixed Hodge modules, $\bigoplus_{i=0}^{n} \mathcal{D}_{P}(\text{Gr}(i))$ can be replaced by $\bigoplus_{i=0}^{n} \mathcal{D}^{b}_{P \times \mathbb{C}^{*}}(T^{*}(\text{Gr}(i))\text{-coh})$ in the constructions above. In this picture, generalising to an arbitrary quantum group should be carried out by replacing $T^{*}(\text{Gr}(i))$ by other quiver varieties.  
+
+The definition of $X$ and $T$, and the proof that they satisfy the Hecke relations, was explained to me by Rapha{\"e}l Rouquier. I thank him very much for his generosity, and for the many things I have learnt from him.   
+
+\
+\end{section}
+
+\tableofcontents
+ 
+\begin{section}{Triangulated $\mathfrak{sl}_{2}$-categorification of tensor products} 
+
+\begin{subsection}{Abelian $\mathfrak{sl}_{2}$-categorification} \label{RelnsHeck}
+
+Let $H_{n}(q)$, for $q \not= 0,1$, denote the affine Hecke algebra of type $\widetilde{A}_{n-1}$ over a field $k$. Let $H_{n}(0)$ (resp. $H_{n}(1)$) denote the nil (resp. degenerate) affine Hecke algebra of type $\widetilde{A}_{n-1}$. In particular, $H_{n}(1)$ is not the specialisation of the affine Hecke algebra to $q=1$.
+
+We shall mainly need $H_{n}(0)$, which has generators $T_{1},\ldots,T_{n-1},X_{1},\ldots,X_{n}$, subject to the following relations: \begin{align*}  T_{i}^{2} &= 0 \\ T_{i}T_{i+1}T_{i} &= T_{i+1}T_{i}T_{i+1} \\ T_{i}T{j} &= T_{j}T_{i} \text{ \ if } \left| i - j \right| > 1  \\ X_{i}X_{j} &= X_{j}X_{i} \\ T_{i}X_{j} &= X_{j}T_{i} \text{ \ if } \left| i - j \right| > 1 \\ T_{i}X_{i}  &= X_{i+1}T_{i} - 1 \\ T_{i}X_{i+1}  &= X_{i}T_{i} + 1. \end{align*}  
+
+In \cite{ChuangRouquierDerivedEquivalencesSymmetricGroupsCategorification}, Chuang and Rouquier introduced the notion of an abelian $\mathfrak{sl}_{2}$-categorification. 
+
+\begin{defn} A weak abelian $\mathfrak{sl}_{2}$-categorification is the data of \begin{itemize} \item a $k$-linear abelian category $\mathcal{A}$, with finite dimensional complexified Grothendieck group $K =\mathbb{C} \otimes K_{0}(\mathcal{A})$ \item an adjoint pair of exact endofunctors $(E,F)$ \end{itemize} such that \begin{itemize} \item $E$ and $F$ induce an action of $\mathfrak{sl}_{2}$ on $K$ \item $F$ is isomorphic to a left adjoint of $E$. \end{itemize} \end{defn}
+
+\begin{ex} \label{WeakCatSimps} Let $Gr(i)$ denote the Grassmannian variety of $i$-dimensional subspaces of $\mathbb{C}^{n}$, and let $\text{Gr}(i,i+1)$ denote the partial flag variety $\{ V,W \subset \mathbb{C}^{n} \mid V \subset W, \ \text{dim}(V) = i, \ \text{dim}(W) = i+1 \}$. We have the following diagram, where $p$ and $q$ are the canonical  projections. \[ \xymatrix{ & Gr(i,i+1) \ar[dl]_{p} \ar[dr]^{q} & \\ Gr(i) & & Gr(i+1) } \] 
+
+The (singular) cohomology algebra $H^{\bullet}(\text{Gr}(i))$ has a unique simple module up to isomorphism, induced by the projection \[ \xymatrix{ H^{\bullet}(\text{Gr}(i)) \ar@{->>}[r] & H^{0}(\text{Gr}(i)) \ar[r]^-{\simeq} & \mathbb{C} }. \] 
+
+The morphism $q$ induces an inclusion of algebras $H^{\bullet}(\text{Gr}(i+1)) \hookrightarrow H^{\bullet}(\text{Gr}(i,i+1))$. The morphism $p$ induces an inclusion of algebras $H^{\bullet}(\text{Gr}(i)) \hookrightarrow H^{\bullet}(\text{Gr}(i,i+1))$.
+
+Regarding $H^{\bullet}(\text{Gr}(i,i+1))$ as an $H^{\bullet}(\text{Gr}(i+1))\text{-}H^{\bullet}(\text{Gr}(i))$-bimodule, define \[ E_{i} \colon H^{\bullet}(\text{Gr}(i))\text{-mod} \rightarrow H^{\bullet}(\text{Gr}(i+1))\text{-mod} \] by $H^{\bullet}(\text{Gr}(i,i+1)) \otimes_{H^{\bullet}(\text{Gr}(i))} - $. Regarding $H^{\bullet}(\text{Gr}(i,i+1))$ as an $H^{\bullet}(\text{Gr}(i))\text{-}H^{\bullet}(\text{Gr}(i+1))$-bimodule, define \[ F_{i} \colon H^{\bullet}(\text{Gr}(i+1))\text{-mod} \rightarrow H^{\bullet}(\text{Gr}(i))\text{-mod}\] by $H^{\bullet}(\text{Gr}(i,i+1)) \otimes_{H^{\bullet}(\text{Gr}(i+1))} - $. Then $E = \bigoplus_{i=0}^{n} E_{i}$ and $F = \bigoplus_{i=0}^{n} F_{i}$ define endofunctors of $\mathcal{A}(n) = \bigoplus_{i=0}^{n} H^{\bullet}(\text{Gr}(i))\text{-mod}$.
+
+It is classical (see 3.4 in \cite{FrenkelKhovanovStroppelCategorificationFiniteDimensionalIrreducibleRepresentationsQuantumSl2TensorProducts}, for example) that, as an $H^{\bullet}(\text{Gr}(i))$-module, \[ H^{\bullet}(\text{Gr}(i,i+1)) \cong \bigoplus_{j=0}^{n-i-1} H^{\bullet}(\text{Gr}(i)). \] 
+
+As an $H^{\bullet}(\text{Gr}(i))$-module, \[ H^{\bullet}(\text{Gr}(i-1,i)) \cong \bigoplus_{j=0}^{i-1} H^{\bullet}(\text{Gr}(i)). \] 
+
+It follows that \[ EF(H^{\bullet}(\text{Gr}(i))) = i(n-i+1)H^{\bullet}(\text{Gr}(i)) \] and that \[ FE(H^{\bullet}(\text{Gr}(i)) = (n-i)(i+1)H^{\bullet}(\text{Gr}(i)). \] 
+
+Let $e$ and $f$ denote the endomorphisms of $K_{0}(\mathcal{A}(n))$ induced by $E$ and $F$. Then \[ (ef -fe)(\left[ H^{\bullet}(\text{Gr}(i)) \right]) = (2i-n)\left[ H^{\bullet}(\text{Gr}(i)) \right]. \] 
+
+Since $\mathbb{C} \otimes K_{0}(\mathcal{A}(n)) = \bigoplus_{i=0}^{n} \mathbb{C}\left[ H^{\bullet}(\text{Gr}(i)) \right]$, we have shown that $ef -fe$ acts on $K_{0}(\mathcal{A}(n)_{\lambda})$ by $\lambda$, where $\mathcal{A}(n)_{\lambda} = H^{\bullet}(\text{Gr}(\frac{\lambda + n}{2}))\text{-mod}$.  
+
+The endofunctors $(E,F)$ are an adjoint pair, with $F$ isomorphic to a left adjoint of $E$. We will see this later. Alternatively, one can prove it algebraically, as in Proposition 3.5 of \cite{FrenkelKhovanovStroppelCategorificationFiniteDimensionalIrreducibleRepresentationsQuantumSl2TensorProducts}. 
+
+Thus we have a weak $\mathfrak{sl}_{2}$-categorification of the simple representation of $\mathfrak{sl}_{2}$ of dimension $n$. In this example, we merged the arguments of 5.3 in \cite{ChuangRouquierDerivedEquivalencesSymmetricGroupsCategorification} and 6.2 in \cite{FrenkelKhovanovStroppelCategorificationFiniteDimensionalIrreducibleRepresentationsQuantumSl2TensorProducts}. In the latter paper, the weak $\mathfrak{sl}_{2}$-categorification is modified to a weak categorification of the simple representation of $U_{q}(\mathfrak{sl}_{2})$ of dimension $n$, using graded versions of the functors and categories above. We will pass to $U_{q}(\mathfrak{sl}_{2})$ slightly differently later.
+\end{ex}
+
+\begin{defn} An abelian $\mathfrak{sl}_{2}$-categorification is the data of \begin{itemize} \item a weak $\mathfrak{sl}_{2}$-categorification $\mathcal{A}$ \item natural transformations $X \in \text{End}(E)$, $T \in \text{End}^{2}(E)$ \end{itemize} such that \begin{itemize} \item $X -a$ is locally nilpotent for some $a \in k$ \item $T_{i} \rightarrow 1_{E^{n-i-1}}T1_{E^{i-1}}$ and $X_{i} \rightarrow 1_{E^{n-i}}X1_{E^{i}}$ define a morphism $H_{n}(q) \rightarrow \text{End}(E^{n})$ for all $n$ and a fixed $q$. \end{itemize} \end{defn}
+
+\begin{rmk} The last property is key, allowing abelian $\mathfrak{sl}_{2}$-categorifications to be controlled. \end{rmk} 
+
+\begin{ex} Via Koszul duality and a special case of our main result, we will see (\ref{RecovAbCatSimp}) that the weak categorification \ref{WeakCatSimps} can be extended to an $\mathfrak{sl}_{2}$-categorification.  
+
+Subquotients of the affine Hecke algebra can be used to give an algebraic abelian $\mathfrak{sl}_{2}$-categorification of the simple representation of $\mathfrak{sl}_{2}$ of dimension $n$ (see 5.3 in \cite{ChuangRouquierDerivedEquivalencesSymmetricGroupsCategorification}). These `minimal' categorifications play a central role in the theory of abelian higher representations of $\mathfrak{sl}_{2}$ (see 5.24 in \cite{ChuangRouquierDerivedEquivalencesSymmetricGroupsCategorification}) .         
+\end{ex}
+
+\begin{rmk} The paper \cite{ChuangRouquierDerivedEquivalencesSymmetricGroupsCategorification} of Chuang and Rouquier illustrates that abelian $\mathfrak{sl}_{2}$-categorifications yield derived equivalences of importance in representation theory. There are other motivations for higher representation theory beyond classical representation theory, as we remark briefly in \ref{TQFTRmks}. \end{rmk} 
+
+\end{subsection}
+
+\begin{subsection}{Triangulated $\mathfrak{sl}_{2}$-categorification} We now define triangulated $\mathfrak{sl}_{2}$-categorifications, after Rouquier.
+
+\begin{defn} Let $V$ denote a finite dimensional representation of $\mathfrak{sl}_{2}$. A {\it weak triangulated $\mathfrak{sl}_{2}$-categorification} of $V$ is the data of \begin{itemize} \item a triangulated category $\mathcal{A}$ \item an adjoint pair $(E,F)$ of triangulated endofunctors of $\mathcal{A}$ \end{itemize} such that \begin{itemize} \item $F$ is isomorphic to a left adjoint of $E$ \item $V= \mathbb{C} \otimes K_{0}(\mathcal{A})$. \end{itemize} \end{defn}
+
+\begin{defn} \label{TriangCat} A {\it triangulated $\mathfrak{sl}_{2}$-categorification} of $V$ is the data of \begin{itemize} \item a weak triangulated $\mathfrak{sl}_{2}$-categorification $\mathcal{A}$  \item natural transformations $X \in \text{End}^{\bullet}(E)$ and $T \in \text{End}^{\bullet}(E^{2})$ \end{itemize} such that \begin{itemize} \item the following diagram in $\text{End}^{\bullet}(E^{3})$ commutes \[ \xymatrix{ & EEE \ar[dl]_{1_{E}T} \ar[dr]^{T1_{E}} & \\ EEE \ar[d]^{T1_{E}} & & EEE \ar[d]^{1_{E}T} \\ EEE \ar[dr]_{1_{E}T} & & EEE \ar[dl]^{T1_{E}} \\ & EEE & } \] \item $T^{2} = 0$ \item $T(X 1_{E})-(1_{E}X)T=1=(X 1_{E})T-T(1_{E}X)$ \item $X$ is nilpotent. \end{itemize} \end{defn}
+  
+\begin{rmk} This is the case $q = 0$, so that we obtain a morphism $H_{n}(0) \rightarrow \text{End}^{\bullet}(E^{n})$. We shall not need the other two cases. \end{rmk}
+
+\begin{rmk} One should also ensure that $\mathcal{T}$ admits a weight decomposition compatible with $E$ and $F$. We explain what holds for abelian categorifications. 
+
+Suppose that $\mathcal{A}$ equipped with endofunctors $E$ and $F$ is an abelian $\mathfrak{sl}_{2}$-categorification of a representation $V$ of $\mathfrak{sl}_{2}$. If $V_{\lambda}$ is a weight space of $V$, let $\mathcal{A}_{\lambda}$ denote the full subcategory of $\mathcal{A}$ of objects whose class belongs to $V_{\lambda}$ in $\mathbb{C} \otimes K_{0}(\mathcal{A})$. It is proved in 5.5 of \cite{ChuangRouquierDerivedEquivalencesSymmetricGroupsCategorification} that $\mathcal{A} = \bigoplus_{\lambda} \mathcal{A}_{\lambda}$, so that the class of an indecomposable object of $\mathcal{A}$ is a weight vector. 
+
+Furthermore, $E$ and $F$ are compatible with the weight  decomposition of $\mathcal{A}$. Indeed, it is proved in 5.27 of \cite{ChuangRouquierDerivedEquivalencesSymmetricGroupsCategorification} that if $\lambda \geq 0$, then \[ EF\text{Id}_{\mathcal{A}_{-\lambda}} \bigoplus \text{Id}^{\oplus \lambda}_{\mathcal{A}_{\lambda}} \cong FE\text{Id}_{\mathcal{A}_{-\lambda}} \]  and  \[ EF\text{Id}_{\mathcal{A}_{\lambda}} \cong FE\text{Id}_{\mathcal{A}_{\lambda}} \bigoplus \text{Id}^{\oplus \lambda}_{\mathcal{A}_{\lambda}}. \] 
+
+In the triangulated case, one (probably) cannot deduce these facts from the axioms, so a stronger condition is needed. We avoid the question of what such a condition should be.    
+\end{rmk}  
+
+\begin{ex} Let $\mathcal{A}$ be an abelian $\mathfrak{sl}_{2}$-categorification of $V$, with endofunctors $E$ and $F$ and natural transformations $X$ and $T$. The functors $E$ and $F$  pass to endofunctors $E^{\bullet}$ and $F^{\bullet}$ on the derived category $\mathcal{D}(\mathcal{A})$ of $\mathcal{A}$. Similarly, $X$ and $T$ pass to natural transformations $X^{\bullet} \in \text{End}^{\bullet}(E^{\bullet})$ and $T^{\bullet} \in \text{End}^{\bullet}((E^{2})^{\bullet})$, giving $\mathcal{D}(\mathcal{A})$ the structure of a triangulated $\mathfrak{sl}_{2}$-categorification of $V$.  \end{ex}
+
+\begin{rmk} \label{TQFTRmks} Following a suggestion of Crane and Frenkel, Rouquier has conjectured that, after passing from triangulated categories to dg-categories, higher representations (of which $\mathfrak{sl}_{2}$-categorifications are a special case) should give rise to a 4-dimensional TQFT. The decategorification of the TQFT should recover the 3-dimensional TQFT of Reshetikhin-Turaev. 
+
+Rouquier has also suggested that higher representation theory should allow moduli space constructions to be bypassed. This would give an algebraic approach to Donaldson-Thomas and Gromov-Witten invariants. 
+\end{rmk}
+
+\end{subsection}
+
+\begin{subsection}{Weak categorification} Let $G = GL_{n}(\mathbb{C})$, and fix a Borel subgroup $B \subset G$. Fix a prime number $l$, and let $\overline{\mathbb{Q}_{l}}$ denote the algebraic closure of the field of $l$-adic numbers. Given a complex algebraic variety $X$ (with its \'etale topology) equipped with an action of $B$, let $\mathcal{D}(X)$ denote the bounded derived category of $B$-smooth constructible $\overline{\mathbb{Q}_{l}}$-sheaves on $X$. Thus $\mathcal{D}(X)$ is the full subcategory of the bounded derived category of constructible $\overline{\mathbb{Q}_{l}}$-sheaves (see 2.2.18 in \cite{BeilinsonBernsteinDeligneFaisceauxPervers}) consisting of complexes whose cohomology sheaves are locally constant on $B$-orbits. 
+
+Let $\xymatrix{X \ar[r]^{f} & Y}$ be a morphism of $B$-schemes of finite type over $\mathbb{C}$. The usual induced functors between the bounded derived categories of constructible $\overline{\mathbb{Q}_{l}}$-sheaves on $X$ and $Y$ restrict to functors $f_{*},f_{!} \colon \mathcal{D}(X) \rightarrow \mathcal{D}(Y)$, and $f^{*},f^{!} \colon \mathcal{D}(Y) \rightarrow \mathcal{D}(X)$. 
+
+Fix a positive integer $n$. Let $\text{Gr}(i)$ and $\text{Gr}(i,i+1)$ be as in \S \ref{WeakCatSimps}. We have the following diagram, where $p$ and $q$ are the canonical projections. \[ \xymatrix{ & Gr(i,i+1) \ar[dl]_{p} \ar[dr]^{q} & \\ Gr(i) & & Gr(i+1) } \] We shall use the fact that $p$ and $q$ are proper, so that $p_{*}=p_{!}$ and $q_{*} = q_{!}$, without further mention. Let $E_{i} = q_{!}p^{*} \colon \mathcal{D}(\text{Gr}(i)) \rightarrow \mathcal{D}(\text{Gr}(i+1))$ and $F_{i} = p_{!} q^{*} \colon \mathcal{D}(\text{Gr}(i+1)) \rightarrow \mathcal{D}(\text{Gr}(i))$. Let $\mathcal{T} = \bigoplus_{i=0}^{n} \mathcal{D}(\text{Gr}(i))$, and define $E = \bigoplus_{i=0}^{n} E_{i} \colon \mathcal{T} \rightarrow \mathcal{T}$, $F = \bigoplus_{i=0}^{n} F_{i} \colon \mathcal{T} \rightarrow \mathcal{T}$.       
+
+The proof of the following proposition is borrowed from 3.3.4 in \cite{ZhengGeometricCategorificationTensorProducts}. We denote the constant $\overline{\mathbb{Q}_{l}}$-sheaf on $X$, regarded as an object of $\mathcal{D}(X)$ concentrated in degree zero, by $\overline{\mathbb{Q}_{l}}$ or $(\overline{\mathbb{Q}_{l}})_{X}$.
+
+\begin{prpn} \label{EF-FE} There is an isomorphism of functors \[ F_{i}E_{i} \oplus \bigoplus_{n-i \leq j < i} {\rm Id}[-2j](-j) \cong E_{i} F_{i} \oplus \bigoplus_{i \leq j < n-i} {\rm Id}[-2j](-j), \] where $\left[ - \right]$ denotes the shift functor of $\mathcal{T}$, and $(-)$ denotes the Tate twist. \end{prpn}
+
+\begin{proof} Let \[ X = \{ V_{1}, V_{2} \in \text{Gr}(i) \mid \text{dim} (V_{1} + V_{2}) \leq i+1 \} \] and \[ Y = \{ V_{1}, V_{2}, V_{3} \mid V_{1}, V_{2} \in \text{Gr}(i), \ V_{3} \in \text{Gr}(i+1), \  V_{1} \subset V_{3}, \ V_{2} \subset V_{3} \} . \] 
+
+We have the following commutative diagram. \[ \xymatrix{ X \ar[rr]^-{v} \ar[dd]_-{u} &  & \text{Gr}(i) \\ & Y \ar[ul]^-{r} \ar[r]^-{t} \ar[d]_-{s} & \text{Gr}(i,i+1) \ar[u]_-{p} \ar[d]^-{q} \\ \text{Gr}(i) & \text{Gr}(i,i+1) \ar[l]^-{p} \ar[r]_-{q} & \text{Gr}(i+1) } \] Here $p$ and $q$ are as above, and \begin{align*} s(V_{1},V_{2},V_{3}) &= (V_{1},V_{3}) \\ t(V_{1},V_{2},V_{3}) &= (V_{2},V_{3}) \\ r(V_{1},V_{2},V_{3}) &= (V_{1},V_{2}) \\ u(V_{1},V_{2}) &=V_{1} \\ v(V_{1},V_{2}) &= V_{2}. \end{align*} 
+
+Note that $Y$ is the fibred product $\text{Gr}(i,i+1) \times_{\text{Gr(i+1)}} \text{Gr}(i,i+1)$. Hence, by proper base change, (see XII, 5.1 in \cite{ArtinDeligneGrothendieckSaintDonatVerdierSGA4Tome3}) $q^{*}q_{!} \simeq t_{!}s^{*}$. Thus $F_{i}E_{i} = p_{!}q^{*}q_{!}p^{*} \simeq p_{!}t_{!}s^{*}p^{*} = v_{!}r_{!}r^{*}u^{*}$. 
+
+By sheafified Poincar\'e duality (see XVIII 3.2.5 in \cite{ArtinDeligneGrothendieckSaintDonatVerdierSGA4Tome3}, and II 7.5 in \cite{KiehlWeissauerWeilConjecturesPerverseSheaveslAdicFourierTransform}), $r_{!}r^{*}(-) \simeq r_{!}\overline{\mathbb{Q}_{l}} \otimes -$. Hence $F_{i}E_{i} \simeq v_{!}(r_{!} \overline{\mathbb{Q}_{l}} \otimes u^{*}(-))$. 
+
+Let $i \colon \Delta \hookrightarrow X$ denote the inclusion of the diagonal $\Delta$ in $X$. Note that \[ \text{Id}_{\text{Gr}(i)} \simeq (vi)_{!}(ui)^{*} \simeq v_{!}i_{!}i^{*}u^{*}. \] We deduce from sheafified Poincar\'e duality that \[ \text{Id}_{\text{Gr}(i)}(-) \simeq v_{!}(i_{!} \overline{\mathbb{Q}_{l}} \otimes u^{*}(-)). \] 
+
+Since $r$ is an isomorphism above $X \setminus \Delta$, we have the following commutative diagram. \[ \xymatrix{ X \setminus \Delta \ar[r]^{\text{id}} \ar[d]_{r^{-1}}^{\sim} & X \setminus \Delta \ar@{^{(}->}[dd] \\ r^{-1}(X \setminus \Delta) \ar@{^{(}->}[d] & \\ Y \ar[r]^{r} & X  } \] By proper base change, the restriction $(r_{!} \overline{\mathbb{Q}_{l}})_{\left| X \setminus \Delta \right.}$ is isomorphic to $(\overline{\mathbb{Q}_{l}})_{X \setminus \Delta}$.
+
+Over $\Delta$, $r$ is a $\mathbb{P}^{n-i-1}$-bundle. Applying proper base change to the diagram \[ \xymatrix{ r^{-1}(\Delta) \ar@{^{(}->}[d] \ar[r]^{r} & \Delta \ar@{^{(}->}[d] \\ Y \ar[r]^{r} & X } \] we see that the restriction $(r_{!} \overline{\mathbb{Q}_{l}})_{\left| \Delta \right.}$ is isomorphic to $r_{!} ((\overline{\mathbb{Q}_{l}})_{r^{-1}(\Delta)})$. Hence (see Lemma 5.4.12 of \cite{BeilinsonBernsteinDeligneFaisceauxPervers}),  \[ (r_{!} \overline{\mathbb{Q}_{l}})_{\left| \Delta \right.} \simeq  \bigoplus_{j=0}^{n-i-1} (\overline{\mathbb{Q}_{l}})_{\Delta}[-2j](-j). \] 
+
+Let \[ Y' = \{ V_{1}, V_{2}, V_{3} \mid V_{1} \in \text{Gr}(i-1), \ V_{2}, V_{3} \in \text{Gr}(i), \  V_{1} \subset V_{2}, \ V_{1} \subset V_{3} \}. \] Note also that \[ X = \{ V_{1}, V_{2} \in \text{Gr}(i) \mid \text{dim} (V \cap V') \geq i-1 \}. \] We have the following canonical commutative diagram. \[ \xymatrix{ X \ar[rr]^-{v} \ar[dd]_-{u} &  & \text{Gr}(i) \\ & Y' \ar[ul]^-{r'} \ar[r]^-{t} \ar[d]_-{s} & \text{Gr}(i-1,i) \ar[u]_-{q} \ar[d]^-{p} \\ \text{Gr}(i) & \text{Gr}(i-1,i) \ar[l]^-{q} \ar[r]_-{p} & \text{Gr}(i-1) } \] Here $u$ and $v$ are as in the commutative diagram at the start of the proof, $p$ and $q$ are the canonical projections, and \begin{align*} s(V_{1},V_{2},V_{3}) &= (V_{1},V_{2}) \\ t(V_{1},V_{2},V_{3}) &= (V_{1},V_{3}) \\ r'(V_{1},V_{2},V_{3}) &= (V_{2},V_{3}). \end{align*} 
+
+As above, we find that \begin{align*} E_{i}F_{i}(-) &\simeq  v_{!}(r'_{!} \overline{\mathbb{Q}_{l}} \otimes u^{*}(-)) \\ (r'_{!} \overline{\mathbb{Q}_{l}})_{\left| X \setminus \Delta \right.} &\simeq (\overline{\mathbb{Q}_{l}})_{X \setminus \Delta} \\ (r'_{!} \overline{\mathbb{Q}_{l}})_{\left| \Delta \right.} &\simeq \bigoplus_{j=0}^{i-1} (\overline{\mathbb{Q}_{l}})_{\Delta}[-2j](-j). \end{align*} 
+
+We have shown that \[ (r_{!} \overline{\mathbb{Q}_{l}})_{\left| \Delta \right.}  \oplus \bigoplus_{n-i \leq j < i}  (\overline{\mathbb{Q}_{l}})_{\left| \Delta \right.}[-2j](-j) \simeq (r'_{!} \overline{\mathbb{Q}_{l}})_{\left| \Delta \right.} \oplus \bigoplus_{i \leq j < n-i}  (\overline{\mathbb{Q}_{l}})_{\left| \Delta \right.}[-2j](-j). \]
+
+This isomorphism, the decomposition theorem of Beilinson, Bernstein, Deligne and Gabber (6.2.5 in \cite{BeilinsonBernsteinDeligneFaisceauxPervers}), and the fact that \[ (r_{!} \overline{\mathbb{Q}_{l}})_{\left| X \setminus \Delta \right.} \simeq (r'_{!} \overline{\mathbb{Q}_{l}})_{\left| X \setminus \Delta \right.} \simeq (\overline{\mathbb{Q}_{l}})_{X \setminus \Delta}, \] imply that \[ r_{!} \overline{\mathbb{Q}_{l}} \oplus \bigoplus_{n-i \leq j < i} i_{!} \overline{\mathbb{Q}_{l}}[-2j](-j) \simeq  r'_{!} \overline{\mathbb{Q}_{l}} \oplus \bigoplus_{i \leq j < n-i} i_{!} \overline{\mathbb{Q}_{l}}[-2j](-j). \]
+
+The result follows by comparing this isomorphism with the realisations of $E_{i}F_{i}$, $F_{i}E_{i}$, and $\text{Id}_{\text{Gr}(i)}$ above. 
+\end{proof}
+
+\begin{cor} The functors $E$ and $F$ induce an action of $\mathfrak{sl}_{2}$ on $\mathbb{C} \otimes K_{0}(\mathcal{A})$. \end{cor}
+
+The functors $E$ and $F$ are adjoint to one another in the following sense.
+
+\begin{prpn} \label{UngradAdj} Up to a shift and a twist, $(E,F)$ and $(F,E)$ are adjoint pairs of functors. \end{prpn}
+
+\begin{proof} Note that $p \colon \text{Gr}(i,i+1) \rightarrow \text{Gr}(i)$ is a $\mathbb{P}^{n-i-1}$-fibre bundle, and $q \colon \text{Gr}(i,i+1) \rightarrow \text{Gr}(i+1)$ is a $\mathbb{P}^{i}$-fibre bundle. Hence $p^{!} \simeq p^{*}[2(n-i-1)](n-i-1)$ and $q^{!} \simeq q^{*}[2i](i)$ (see, for example, II.8.1 in \cite{KiehlWeissauerWeilConjecturesPerverseSheaveslAdicFourierTransform}). The result follows from the adjointness of $(p^{*},p_{*})$, $(p_{!},p^{!})$, $(q^{*},q_{*})$, and $(q_{!},q^{!})$. 
+ \end{proof}
+ 
+Using the weight space decomposition of $\mathbb{C} \otimes K_{0}(\mathcal{T})$, we now determine the action of $\mathfrak{sl}_{2}$ on $\mathbb{C} \otimes K_{0}(\mathcal{T})$ induced by $E$ and $F$. A different approach was taken in \cite{ZhengGeometricCategorificationTensorProducts}.
+
+Let $\mathcal{P}({\rm Gr}(i))$ denote the category of $B$-smooth perverse sheaves on ${\rm Gr}(i)$, and let $\mathcal{D}^{b}(\mathcal{P}({\rm Gr}(i)))$ denote the bounded derived category of $\mathcal{P}({\rm Gr}(i))$ with its standard $t$-structure. There exists (see \cite{BeilinsonDerivedCategoryPerverseSheaves}) a canonical $t$-exact triangulated functor $\mathcal{D}^{b}(\mathcal{P}({\rm Gr}(i))) \rightarrow \mathcal{D}({\rm Gr}(i))$, which is the identity on $\mathcal{P}({\rm Gr}(i))$. The existence follows from the existence of a filtered counterpart to $\mathcal{D}({\rm Gr}(i))$, via the formalism of filtered triangulated categories.
+
+\begin{prpn} \label{TriangEquiv} The canonical functor $\mathcal{D}^{b}(\mathcal{P}(\rm{Gr}(i))) \rightarrow \mathcal{D}({\rm Gr}(i))$ is an equivalence of categories. \end{prpn}
+
+\begin{proof} This is 1.3 in \cite{BeilinsonDerivedCategoryPerverseSheaves}. \end{proof}
+  
+\begin{prpn} \label{GenProj} The category $\mathcal{D}^{b}(\mathcal{P}({\rm Gr}(i)))$ is generated as a triangulated category by the projective objects in $\mathcal{P}({\rm Gr}(i))$.  \end{prpn}
+
+\begin{proof} Indeed, $\mathcal{P}(\text{Gr}(i))$ has enough projectives (3.3.1 in \cite{BeilinsonGinzburgSoergelKoszulDualityPatternsRepresentationTheory}), and has finite global dimension (3.2.2 in \cite{BeilinsonGinzburgSoergelKoszulDualityPatternsRepresentationTheory}).  \end{proof}
+
+\begin{cor} \label{Dimn} As a $\mathbb{C}$-vector space, $\mathbb{C} \otimes K_{0}(\mathcal{T})$ has dimension $2^{n+1}$. \end{cor}
+
+\begin{proof} Let $\mathcal{T}' = \bigoplus_{i=0}^{n} \mathcal{D}^{b}(\mathcal{P}(\text{Gr}(i)))$. By \ref{TriangEquiv}, $\mathbb{C} \otimes K_{0}(\mathcal{T}) \simeq \mathbb{C} \otimes K_{0}(\mathcal{T}')$. It follows from \ref{GenProj} that a basis of $\mathbb{C} \otimes K_{0}(\mathcal{T}')$ is given by the classes of indecomposable projective perverse sheaves in $\mathcal{T}'$. 
+
+Indecomposable projective perverse sheaves in $\mathcal{T}'$ are in bijection with simple perverse sheaves in $\mathcal{T}'$, which are in bijection with orbits of $B$ on $\bigoplus_{i=0}^{n} \text{Gr}(i)$. It is classical that there are $\binom{n}{i}$ orbits of $B$ on $\text{Gr}(i)$, and the result follows. \end{proof}
+
+\begin{prpn} \label{Iso} Let $L$ denote the standard representation of $\mathfrak{sl}_{2}$. As a representation of $\mathfrak{sl}_{2}$, $\mathbb{C} \otimes K_{0}(\mathcal{T}) \simeq L^{\otimes n}$. \end{prpn}
+
+\begin{proof} By \ref{Dimn}, $\mathbb{C} \otimes K_{0}(\mathcal{T})$ has the correct dimension. Let $h = ef -fe$, where $e$ and $f$ are the endomorphisms of $\mathbb{C} \otimes K_{0}(\mathcal{T})$ induced by $E$ and $F$. By \ref{EF-FE}, and the fact that $\mathbb{C} \otimes K_{0}(\text{Gr}(i))$ has dimension $\binom{n}{i}$, the eigenvalues of $h$ on $\mathbb{C} \otimes K_{0}(\mathcal{T})$ are correct.  \end{proof}
+
+We have proved the following result.
+
+\begin{cor} \label{WkCatStand} The endofunctors $E$ and $F$ give $\mathcal{T}$ the structure of a weak $\mathfrak{sl}_{2}$-categorification of $L^{\otimes n}$. \end{cor}
+
+Given a parabolic subgroup $P$ of $GL_{n}(\mathbb{C})$ for some $n$, let $\mathcal{D}_{P}(\text{Gr}(i))$ denote the category of $P$-smooth constructible $\overline{\mathbb{Q}_{l}}$-sheaves. Let $V$ be a tensor product of arbitrary simple representations of $\mathfrak{sl}_{2}$.  
+ 
+\begin{prpn} \label{ResultWkCat} There is an integer $n \geq 0$, a parabolic subgroup $P \subset GL_{n}(\mathbb{C})$, and a pair of endofunctors $(E_{P},F_{P})$ of $\mathcal{T}_{P} = \bigoplus_{i=0}^{n} \mathcal{D}_{P}({\rm Gr}(i))$ giving $\mathcal{T}_{P}$ the structure of a weak $\mathfrak{sl}_{2}$-categorification of $V$. \end{prpn} 
+
+\begin{proof} Exactly as in the case $V = L^{\otimes n}$, $P = B \subset GL_{n}(\mathbb{C})$  above. The results \ref{Dimn} and \ref{Iso} must be modified, but we omit this. Given $V$, the interested reader will have no difficulty finding the corresponding parabolic and checking the details. \end{proof}
+
+\end{subsection}
+
+\begin{subsection}{2-morphisms $X$ and $T$} \label{2-morphs} We now explain how to extend the weak $\mathfrak{sl}_{2}$-categorification $\mathcal{T}$ of $L^{\otimes n}$ to a Chuang-Rouquier $\mathfrak{sl}_{2}$-categorification. In order to define $X \in \text{End}^{\bullet}(E)$, we realise $E_{i}$ as a Fourier-Mukai transform for every $i$. 
+
+The following diagram commutes, where $p$, $q$, $p'$ and $q'$ are the canonical projections, and $j$ is the canonical map $(V_{1} \subset V_{2}) \rightarrow (V_{1},V_{2})$. \[ \xymatrix{ & Gr(i,i+1) \ar[d]^-{j} \ar[dl]_-{p} \ar[dr]^-{q} & \\ Gr(i) & Gr(i) \times Gr(i+1) \ar[l]^-{p'} \ar[r]_-{q'} & Gr(i+1) } \]
+
+\begin{prpn} \label{Four-Muk-E} There is an isomorphism of functors  $E_{i} \simeq q'_{*}(j_{*}\overline{\mathbb{Q}_{l}} \otimes p'^{*}(-))$.  \end{prpn}
+
+\begin{proof} Straightforward. \end{proof}
+
+Let $\mathscr{L}$ denote the tautological line bundle on $\text{Gr}(i,i+1)$. The fibre above the point $V_{i} \subset V_{i+1}$ is $V_{i+1} / V_{i}$. The first Chern class $c_{1}(\mathscr{L}) \in H^{2}(\text{Gr}(i,i+1), \overline{\mathbb{Q}_{l}}(1))$ of $\mathscr{L}$ can be viewed as a morphism, belonging to $\text{Hom}_{\mathcal{D}(\text{Gr}(i,i+1))}(\overline{\mathbb{Q}_{l}},\overline{\mathbb{Q}_{l}}[2](1))$. By functoriality, $c_{1}(\mathscr{L})$ determines a morphism in $\text{Hom}_{\mathcal{D}(\text{Gr}(i) \times \text{Gr}(i+1))}(j_{*}\overline{\mathbb{Q}_{l}},j_{*}\overline{\mathbb{Q}_{l}}[2](1))$ and hence, by the proposition, determines an endomorphism of $E_{i}$. Assembling these endomorphisms, we obtain an endomorphism $X$ of $E$.
+
+In order to define $T \in \text{End}^{\bullet}(E^{2})$, we realise $E_{i+1}E_{i}$ as a Fourier-Mukai transform for every $i$. We have the following commutative diagram, where $p,q,p'$ and $q'$ are the canonical projections, and $j$ is the canonical map $(V_{1} \subset V_{2} \subset V_{3}) \rightarrow (V_{1},V_{3})$. \[ \xymatrix{ & Gr(i,i+1,i+2) \ar[d]^-{j} \ar[dl]_-{p} \ar[dr]^-{q} & \\ Gr(i) & Gr(i) \times Gr(i+2) \ar[l]^-{p'} \ar[r]_-{q'} & Gr(i+2) } \] 
+
+\begin{prpn} \label{CharactE2} There is an isomorphism of functors $E_{i+1}E_{i} \simeq q'_{*}(j_{*} \overline{\mathbb{Q}_{l}} \otimes p'^{*}(-))$. \end{prpn}
+
+\begin{proof} We have the following commutative diagram, where the $\mu_{i},\psi_{i}$ and $j_{i}$ are the canonical maps, and $j$ is the same as in the diagram above.
+
+ \[ \xymatrix @C-3pc {& & \text{Gr}(i,i+1,i+2) \ar[d]^{j} \ar[dl]_{\mu_{1}} \ar[dr]^{\mu_{2}} & & \\ & \text{Gr}(i,i+1) \times \text{Gr}(i+2) \ar[dl]^{\phi_{1}} \ar[dr]^{\psi_{1}} & \text{Gr}(i) \times \text{Gr}(i+2) & \text{Gr}(i) \times \text{Gr}(i+1,i+2) \ar[dl]_{\psi_{2}} \ar[dr]_{\phi_{2}} & \\ \text{Gr}(i,i+1) \ar[dr]^{j_{1}} & & \text{Gr}(i) \times \text{Gr}(i+1) \times \text{Gr}(i+2) \ar[dl]^{\varphi_{1}} \ar[u]^{\varphi_{2}} \ar[dr]_{\varphi_{3}} & & \text{Gr}(i+1,i+2) \ar[dl]_{j_{2}} \\ & \text{Gr}(i) \times \text{Gr}(i+1) &  & \text{Gr}(i+1) \times \text{Gr}(i+2) & } \] 
+
+It follows from \ref{Four-Muk-E} (see 12.2.2 in \cite{RouquierCategorificationSl2BraidGroups}) that there is an isomorphism of functors $E_{i+1}E_{i} \simeq q'_{*}(K \otimes p'^{*}(-))$, where $K = {\varphi_{2}}_{*}({\varphi_{1}}^{*} {j_{1}}_{*} \overline{\mathbb{Q}_{l}} \otimes {\varphi_{3}}^{*} {j_{2}}_{*} \overline{\mathbb{Q}_{l}})$. By proper base change with respect to the diamonds on the lower left and lower right of the diagram, $K \simeq {\varphi_{2}}_{*}({\psi_{1}}_{*} \overline{\mathbb{Q}_{l}} \otimes {\psi_{2}}_{*} \overline{\mathbb{Q}_{l}} )$. 
+
+Thus $K \simeq {\varphi_{2}}_{*}{\psi_{1}}_{*} ({\psi_{1}}^{*}{\psi_{2}}_{*}\overline{\mathbb{Q}_{l}})$. By proper base change with respect to the upper diamond (ignoring the morphisms inside), $K \simeq {\varphi_{2}}_{*}{\psi_{1}}_{*} ({\mu_{1}}_{*}\overline{\mathbb{Q}_{l}})$. The result follows from the commutativity of the upper diamond.   
+\end{proof}
+
+\begin{rmk} A different characterisation of $E_{i+1}E_{i}$ is given in 3.3.3 of \cite{ZhengGeometricCategorificationTensorProducts}. We will see it later. \end{rmk}
+
+The map $j$ factors through the canonical map $\pi \colon \text{Gr}(i,i+1,i+2) \rightarrow \text{Gr}(i,i+2)$ given by $(V_{1} \subset V_{2} \subset V_{3}) \rightarrow (V_{1} \subset V_{3})$. Let $R^{k}\pi_{*}$ denote the $k^{\text{th}}$ higher direct image of $\pi$, and regard $R^{2}\pi_{*}(\overline{\mathbb{Q}_{l}})$ as a complex concentrated in degree zero. Since $R^{k}\pi_{*}$ vanishes for $k > 2$, there is a canonical morphism $\pi_{*}(\overline{\mathbb{Q}_{l}}[2]) \rightarrow R^{2}\pi_{*}(\overline{\mathbb{Q}_{l}})$ in $\mathcal{D}(\text{Gr}(i,i+2))$.
+
+Let $\eta \colon R^{2}\pi_{*}(\overline{\mathbb{Q}_{l}}(1)) \rightarrow \overline{\mathbb{Q}_{l}}$ denote the trace morphism, which is an isomorphism of $\overline{\mathbb{Q}_{l}}$-sheaves (see XVIII 2.9 in \cite{ArtinDeligneGrothendieckSaintDonatVerdierSGA4Tome3}). By composition, we obtain a canonical morphism $t' \colon \pi_{!}(\overline{\mathbb{Q}_{l}}[2](1)) \rightarrow R^{2}\pi_{!}(\overline{\mathbb{Q}_{l}}) \rightarrow \overline{\mathbb{Q}_{l}}$.
+
+Moreover, $t'$ extends to a natural transformation $\pi_{!}\pi^{!}(K) \rightarrow K$ for any $K \in \mathcal{D}(\text{Gr}(i,i+2))$, via the following commutative diagram (cf. II.8 in \cite{KiehlWeissauerWeilConjecturesPerverseSheaveslAdicFourierTransform}). \[ \xymatrix{ \pi_{!}\pi^{!} K \ar[d]_-{\sim} \ar@{-->}[r] & K \\ \pi_{!}(\overline{\mathbb{Q}_{l}}[2](1) \otimes \pi^{*}(K)) \ar[r]_-{\sim} & \pi_{!}(\overline{\mathbb{Q}_{l}}[2](1)) \otimes K \ar[u]_-{t' \otimes \text{id}_{K}} } \]
+
+Composing with the adjunction morphism $K \rightarrow \pi_{*}\pi^{*}(K)$, we get a natural transformation $T' \colon \pi_{!} \pi^{!}(K) \rightarrow \pi_{*} \pi^{*}(K)$. Let $t$ denote the morphism obtained by taking $K = \overline{\mathbb{Q}_{l}}[-2](-1)$. By \ref{CharactE2}, $t$ induces an endomorphism of $E_{i+1}E_{i}$ for every $i$. Assembling these endomorphisms, we obtain an endomorphism $T$ of $E^{2}$.  
+
+\begin{rmk} The definitions of $X$ and $T$ were outlined to the author by Rouquier. \end{rmk}
+
+Let $\mathscr{E}$ denote the canonical rank two vector bundle on $\text{Gr}(i,i+2)$ whose fibre above $(V_{i} \subset V_{i+2})$ is $V_{i+2} / V_{i}$. The $\mathbb{P}^{1}$-bundle $\pi$ is the projectivisation of $\mathscr{E}$, and thus gives rise to a tautological line bundle $\mathcal{O}_{\pi}(-1)$ on $\text{Gr}(i,i+1,i+2)$. Indeed, $\mathcal{O}_{\pi}(-1)$ is a subbundle of the pull-back bundle $\pi^{*}\mathscr{E}$, whose fibre above $(V_{i} \subset V_{i+1} \subset V_{i+2})$ is $V_{i+1} / V_{i}$. The quotient bundle $\pi^{*} \mathscr{E} / \mathcal{O}_{\pi}(-1)$ is the line bundle on $\text{Gr}(i,i+1,i+2)$ corresponding to the twisting sheaf $\mathcal{O}_{\pi}(1)$. The fibre of $\pi^{*} \mathscr{E} / \mathcal{O}_{\pi}(-1)$ above $(V_{i} \subset V_{i+1} \subset V_{i+2})$ is $V_{i+2} / V_{i+1}$. 
+
+By \ref{CharactE2}, the first Chern classes $c_{1}(\mathcal{O}_{\pi}(-1))$ and $c_{1}(\pi^{*} \mathscr{E} / \mathcal{O}_{\pi}(-1))$ induce endomorphisms of $E^{2}$, which we denote by $x$ and $y$ respectively.
+
+\begin{prpn} In ${\rm End}^{\bullet}(E^{2})$, we have $1_{E}X = x$ and $X1_{E} = y$. \end{prpn}    
+
+\begin{proof} The second relation can be seen by inspecting the proof of \ref{CharactE2}. Indeed, $X1_{E}$ is determined by the morphism ${\varphi_{2}}_{*}({\varphi_{1}}^{*} {j_{1}}_{*} \overline{\mathbb{Q}_{l}} \otimes {\varphi_{3}}^{*} {j_{2}}_{*} c_{1}(\mathscr{L}))$, where $\mathscr{L}$ is the tautological line bundle on $\text{Gr}(i+1,i+2)$. By proper base change, this morphism identifies with   ${\varphi_{2}}_{*}({\psi_{1}}_{*} \overline{\mathbb{Q}_{l}} \otimes {\psi_{2}}_{*} c_{1}(\phi_{2}^{*}\mathscr{L}))$, and hence with ${\varphi_{2}}_{*}{\psi_{1}}_{*} ({\psi_{1}}^{*}{\psi_{2}}_{*} c_{1}(\phi_{2}^{*}\mathscr{L}))$. By proper base change once more, this morphism identifies with $j_{*}c_{1}(\mu_{2}^{*}\phi_{2}^{*}\mathscr{L})$. The pull-back bundle $(\phi_{2} \mu_{2})^{*} \mathscr{L}$ is exactly $\pi^{*} \mathscr{E} / \mathcal{O}_{\pi}(-1)$, as required.
+
+The endofunctor $1_{E}X$ is determined by the morphism ${\varphi_{2}}_{*}({\varphi_{1}}^{*} {j_{1}}_{*} c_{1}(\mathscr{L}) \otimes {\varphi_{3}}^{*} {j_{2}}_{*} \overline{\mathbb{Q}_{l}})$, where $\mathscr{L}$ is the tautological line bundle on $\text{Gr}(i,i+1)$. As above, this morphism identifies with ${\varphi_{2}}_{*}({\psi_{1}}_{*} c_{1}(\phi_{1}^{*}\mathscr{L})  \otimes {\psi_{2}}_{*} \overline{\mathbb{Q}_{l}} )$, and hence with ${\varphi_{2}}_{*}{\psi_{2}}_{*} ({\psi_{2}}^{*}{\psi_{1}}_{*} c_{1}(\phi_{1}^{*}\mathscr{L}))$. By proper base change, this morphism identifies with $j_{*}c_{1}(\mu_{1}^{*}\phi_{1}^{*}\mathscr{L})$. The pull-back bundle $(\phi_{1} \mu_{1})^{*} \mathscr{L}$ is exactly $\mathcal{O}_{\pi}(-1)$, as required. 
+\end{proof}
+
+We now show that $T$, $x$ and $y$ satisfy the defining relations \ref{RelnsHeck} of the affine nilHecke algebra $H_{2}(0)$. The proof was outlined to the author by Rouquier.
+
+\begin{prpn} \label{CatHeckRelns} In ${\rm End}^{\bullet}(E^{2})$, we have \[ T^{2} = 0, \ yT - Tx = 1, \ T(x+y) = (x+y)T. \] \end{prpn}
+
+\begin{proof} By the naturality of $T'$, the composition \[ \xymatrix{ \pi_{*} \pi^{*} \overline{\mathbb{Q}_{l}} \ar[r]^-{\sim} & \pi_{*}\overline{\mathbb{Q}_{l}} \ar[r]^-{t} & \pi_{*} \overline{\mathbb{Q}_{l}}[-2](-1) \ar[r]^-{\sim} & \pi_{*}\pi^{*}\overline{\mathbb{Q}_{l}}[-2](-1)} \] fits into the following commutative diagram, for any $\alpha \in \text{End}^{2}_{\mathcal{D}(\text{Gr}(i,i+2))}(\overline{\mathbb{Q}_{l}})$. \[ \xymatrix{ \pi_{*} \pi^{*} \overline{\mathbb{Q}_{l}} \ar[d]_-{\pi_{*}\pi^{*}\alpha} \ar[r]^-{\sim} & \pi_{*}\overline{\mathbb{Q}_{l}} \ar[r]^-{t} & \pi_{*} \overline{\mathbb{Q}_{l}}[-2](-1) \ar[r]^-{\sim} & \pi_{*}\pi^{*}\overline{\mathbb{Q}_{l}}[-2](-1) \ar[d]^-{\pi_{*}\pi^{*}\alpha [-2]} \\ \pi_{*} \pi^{*} \overline{\mathbb{Q}_{l}}[2] \ar[r]^-{\sim} & \pi_{*}\overline{\mathbb{Q}_{l}}[2] \ar[r]^-{t[2]} & \pi_{*} \overline{\mathbb{Q}_{l}}(-1) \ar[r]^-{\sim} & \pi_{*}\pi^{*}\overline{\mathbb{Q}_{l}}(-1) }\] 
+
+We deduce that $T$ commutes with $x+y$, since \[ c_{1}(\mathcal{O}_{\pi}(-1)) + c_{1}(\pi^{*}\mathscr{E} / \mathcal{O}_{\pi}(-1)) = \pi^{*}c_{1}(\mathscr{E}) .\] 
+
+Furthermore, $t[-2](-1) \circ t$ factors through a morphism $\overline{\mathbb{Q}_{l}}[-2](-1) \rightarrow \overline{\mathbb{Q}_{l}}[-4](-2)$. This is the zero morphism, since shifting $\overline{\mathbb{Q}_{l}}$ by the dimension of $\text{Gr}(i,i+2)$ is a simple perverse sheaf on $\text{Gr}(i,i+2)$. Thus $T^{2} = 0$.
+
+Let $\alpha = \pi_{*}c_{1}(\mathcal{O}_{\pi}(-1))$ and $\beta = \pi_{*}c_{1}(\mathcal{O}_{\pi}(1))$. We claim that the following composition is the identity in $\text{End}^{\bullet}_{\mathcal{D}(\text{Gr}(i,i+2))}(\overline{\mathbb{Q}_{l}})$. \[ \xymatrix{ \overline{\mathbb{Q}_{l}} \ar[r]^-{\text{adj}} & \pi_{*} \overline{\mathbb{Q}_{l}} \ar[r]^-{\beta} & \pi_{*} \overline{\mathbb{Q}_{l}}[2](1) \ar[r]^-{t} & \overline{\mathbb{Q}_{l}} } \] 
+
+Given a point $z \in \text{Gr}(i,i+2)$, let $\pi' \colon \pi^{-1}(z) \simeq \mathbb{P}^{1} \rightarrow \{z\}$ denote the fibre map. Taking the fibre of the above composition at $z$, and applying proper base change, we obtain a morphism of the following form. \[ \xymatrix{ \overline{\mathbb{Q}_{l}} \ar[r]^-{\text{adj}} & \pi'_{*} \overline{\mathbb{Q}_{l}} \ar[rr]^-{c_{1}(\mathcal{O}_{\mathbb{P}^{1}}(1))} && \pi'_{*} \overline{\mathbb{Q}_{l}}[2](1) \ar[r] & \overline{\mathbb{Q}_{l}} } \]  
+
+Via the natural isomorphism between $\pi'$ and the global sections functor $\Gamma(\mathbb{P}^{1},-)$, the above morphism identifies with the following morphism, where $\tau$ denotes the trace morphism on cohomology. \[ \xymatrix{\overline{\mathbb{Q}_{l}} \ar[rr]^-{c_{1}(\mathcal{O}_{\mathbb{P}^{1}}(1))} && H^{2}(\mathbb{P}^{1},\overline{\mathbb{Q}_{l}}) \ar[r]^-{\tau} & \overline{\mathbb{Q}_{l}}} \] 
+
+This is the identity, since the trace of the class of $c_{1}(\mathcal{O}_{\mathbb{P}^{1}})$ in $H^{2}(\mathbb{P}^{1},\overline{\mathbb{Q}_{l}})$ is $1$ (see Cycle, 2.1.5 in \cite{DeligneCohomologieEtale}).
+
+The following composition is also the identity morphism, since $-c_{1}(\mathcal{O}_{\pi}(-1)) = c_{1}(\mathcal{O}_{\pi}(1))$. \[ \xymatrix{ \overline{\mathbb{Q}_{l}} \ar[r]^-{\text{adj}} & \pi_{*} \overline{\mathbb{Q}_{l}} \ar[r]^-{-\alpha} & \pi_{*} \overline{\mathbb{Q}_{l}}[2](1) \ar[r]^-{t} & \overline{\mathbb{Q}_{l}} } \] 
+ 
+The composition $\xymatrix{ \overline{\mathbb{Q}_{l}} \ar[r]^{\text{adj}} & \pi_{*}\overline{\mathbb{Q}_{l}} \ar[r]^-{t} & \overline{\mathbb{Q}_{l}}[-2](-1) }$ is zero, since it factors through a morphism $\overline{\mathbb{Q}_{l}} \rightarrow \overline{\mathbb{Q}_{l}}[-2](-1)$. 
+
+It follows that the following composition is equal to the adjunction morphism $\overline{\mathbb{Q}_{l}} \rightarrow \pi_{*}\overline{\mathbb{Q}_{l}}$. \[ \xymatrix{ \overline{\mathbb{Q}_{l}} \ar[r]^-{\text{adj}} & \pi_{*} \overline{\mathbb{Q}_{l}} \ar[rrr]^{\beta t - t[2](1)\alpha} &&& \pi_{*} \overline{\mathbb{Q}_{l}} } \] 
+
+The following diagram commutes, since $c_{2}(\pi^{*}\mathscr{E}) = c_{1}(\mathcal{O}_{\pi}(-1)) c_{1}(\mathcal{O}_{\pi}(1))$. \[ \xymatrix{ & \overline{\mathbb{Q}_{l}}[4](2) \ar[dr]^{\text{adj}} & & \\ \overline{\mathbb{Q}_{l}} \ar[ur]^{c_{2}(\mathscr{E})} \ar[r]^{\text{adj}} & \pi_{*}\overline{\mathbb{Q}_{l}} \ar[r]^-{\alpha \beta} & \pi_{*}\overline{\mathbb{Q}_{l}}[4](2) \ar[rr]^-{t[2](1)} && \overline{\mathbb{Q}_{l}}[2](1) } \] 
+
+In particular, the row in the above diagram factors through a morphism $\overline{\mathbb{Q}_{l}}[4](2) \rightarrow \overline{\mathbb{Q}_{l}}[2](1)$. It is therefore zero, and the composition \[ \xymatrix{ \overline{\mathbb{Q}_{l}} \ar[r]^-{\text{adj}} & \pi_{*}\overline{\mathbb{Q}_{l}} \ar[r]^-{\beta} & \pi_{*} \overline{\mathbb{Q}_{l}}[2](1) \ar[rrr]^-{\beta t -t[2](1)\alpha} &&& \pi_{*}\overline{\mathbb{Q}_{l}}[2](1)  } \] is equal to the composition \[ \xymatrix{ \overline{\mathbb{Q}_{l}} \ar[r]^{\text{adj}} & \pi_{*} \overline{\mathbb{Q}_{l}} \ar[r]^-{\beta} & \pi_{*} \overline{\mathbb{Q}_{l}}[2](1) }. \] 
+
+This proves that $yT - Tx = 1$. 
+\end{proof}
+
+\begin{cor} \label{OtherReln} In ${\rm End}^{\bullet}(E^{2})$, we have $Ty - xT = 1$ . \end{cor}
+
+\begin{prpn} \label{BraidReln} In ${\rm End}^{\bullet}(E^{3})$, the following diagram commutes. \[ \xymatrix{ & EEE \ar[dl]_{1_{E}T} \ar[dr]^{T1_{E}} & \\ EEE \ar[d]^{T1_{E}} & & EEE \ar[d]^{1_{E}T} \\ EEE \ar[dr]_{1_{E}T} & & EEE \ar[dl]^{T1_{E}} \\ & EEE & } \] \end{prpn}
+
+\begin{proof} Follows from the compatibility of the trace morphism with base change and composition. We omit the details.   
+\end{proof}
+
+Combining \ref{WkCatStand}, \ref{CatHeckRelns}, \ref{OtherReln}, and \ref{BraidReln}, we have the following result. 
+
+\begin{prpn} The endofunctors $E$ and $F$, and the endomorphisms $X$ and $T$, give $\mathcal{T}$ the structure of an $\mathfrak{sl}_{2}$-categorification of $L^{\otimes n}$. \end{prpn}
+
+Let $V$ be a tensor product of arbitrary simple representations of $\mathfrak{sl}_{2}$.
+
+\begin{prpn} \label{sl2Cat} There is an integer $n \geq 0$, a parabolic subgroup $P \subset GL_{n}(\mathbb{C})$, a pair of endofunctors $(E_{P},F_{P})$ of $\mathcal{T}_{P} = \bigoplus_{i=0}^{n} \mathcal{D}_{P}({\rm Gr}(i))$, and a pair of endomorphisms $X_{P} \in {\rm End}^{\bullet}(E_{P})$, $T_{P} \in {\rm End}^{\bullet}(E_{P}^{2})$ giving $\mathcal{T}_{P}$ the structure of an $\mathfrak{sl}_{2}$-categorification of $V$. 
+\end{prpn} 
+
+\begin{proof} The integer $n \geq 0$, the parabolic subgroup $P \subset GL_{n}(\mathbb{C})$, and the endofunctors $(E_{P},F_{P})$ are given by \ref{ResultWkCat}. The 2-morphisms $X_{P}$ and $T_{P}$ are obtained exactly as in the case $V=L^{\otimes n}$ and $P=B \subset GL_{n}(\mathbb{C})$ above. \end{proof}
+\end{subsection}
+
+\begin{subsection}{Action of $\mathbb{Z}[q,q^{-1}]$} \label{QuantResults} We explain how to pass to an $\mathfrak{sl}_{2}$-categorification of the quantum group $U_{q}(\mathfrak{sl}_{2})$, where $q \in \mathbb{C}$ is neither zero nor a root of unity. A slightly different approach via shifting $E$ and $F$ is taken in \cite{FrenkelKhovanovStroppelCategorificationFiniteDimensionalIrreducibleRepresentationsQuantumSl2TensorProducts} and \cite{ZhengGeometricCategorificationTensorProducts}. 
+
+Fix a parabolic subgroup $P \subset GL_{n}(\mathbb{C})$, and let $\mathcal{T}_{P}(q) = \bigoplus_{i=0}^{n} \mathcal{D}_{P}(\text{Gr}(i))$. Choosing an isomorphism $\tau \colon \overline{\mathbb{Q}_{l}} \rightarrow \mathbb{C}$, fix an element $q^{1/2} \in \overline{\mathbb{Q}_{l}}$. This allows us to define a half-integral Tate twist $(-)(\frac{n}{2})$ on $\mathcal{D}_{P}(\text{Gr}(i))$. For even $n$, this is the usual Tate twist. 
+  
+We have the following diagram, where $p$ and $r$ are the canonical projections. \[ \xymatrix{ & Gr(i,i+1) \ar[dl]_{p} \ar[dr]^{r} & \\ Gr(i) & & Gr(i+1) } \] Let $E_{i} = r_{!}p^{*}(\frac{n-i-1}{2}) \colon \mathcal{D}_{P}(\text{Gr}(i)) \rightarrow \mathcal{D}_{P}(\text{Gr}(i+1))$, $F_{i} = p_{!} r^{*}(\frac{i}{2}) \colon \mathcal{D}_{P}(\text{Gr}(i+1)) \rightarrow \mathcal{D}_{P}(\text{Gr}(i))$, and $G_{i} = (\frac{2i-n}{2}) \colon \mathcal{D}_{P}(\text{Gr}(i)) \rightarrow \mathcal{D}_{P}(\text{Gr}(i))$. Define $E,F,G \colon \mathcal{T}_{P}(q) \rightarrow \mathcal{T}_{P}(q)$ by $E = \bigoplus_{i=0}^{n} E_{i}$, $F = \bigoplus_{i=0}^{n} F_{i}$, and $G = \bigoplus_{i=0}^{n} G_{i}$.
+
+There is an action of $\mathbb{Z}[q,q^{-1}]$ on $K_{0}(\mathcal{T}_{P}(q))$ given by $q \cdot \left[ K \right] = \left[ K(-\frac{1}{2}) \right]$. We prove that $E$, $F$, and $G$ induce an action of $U_{q}(\mathfrak{sl}_{2})$ on $\mathbb{Q}(q) \otimes_{\mathbb{Z}[q,q^{-1}]} K_{0}(\mathcal{T}_{P}(q))$.
+
+\begin{prpn} \label{QuantRelns} We have $\left[ GG^{-1}\right] = \left[ G^{-1}G \right] = 1, \  \left[ GEG^{-1}\right] = q^{-2}\left[ E \right], \ \left[ GFG^{-1} \right] = q^{2} \left[ F \right]$, and $\left[EF\right] - \left[FE\right] = \frac{\left[G\right] - [G^{-1}]}{q-q^{-1}}.$ \end{prpn}  
+
+\begin{proof} The last relation follows from \ref{EF-FE}, which implies the following isomorphism of functors. \[ F_{i}E_{i} \oplus \bigoplus_{n-i \leq j < i} {\rm Id}[-2j](-j)(\tfrac{n-1}{2}) \simeq E_{i} F_{i} \oplus \bigoplus_{i \leq j < n-i} {\rm Id}[-2j](-j)(\tfrac{n-1}{2}). \] 
+
+The other relations are easily checked.
+ \end{proof}
+
+Let $V$ denote a tensor product of simple representations of $U_{q}(\mathfrak{sl}_{2})$. 
+
+\begin{prpn} \label{QuantWkCat} There is an integer $n \geq 0$ and a parabolic subgroup $P \subset GL_{n}(\mathbb{C})$, together with endofunctors $E,F$ and $G$ of $\mathcal{T}_{P}(q)$, such that the induced action of $U_{q}(\mathfrak{sl}_{2})$ on $\mathbb{Q}(q) \otimes_{\mathbb{Z}[q,q^{-1}]} K_{0}(\mathcal{T}_{P}(q))$ is isomorphic to the action of $U_{q}(\mathfrak{sl}_{2})$ on $V$. \end{prpn} 
+
+\begin{proof} After \ref{QuantRelns}, this is a question of combinatorics (cf. \ref{TriangEquiv} - \ref{ResultWkCat}). The Clebsch-Gordon decomposition of $V$ into a direct sum of simple representations (see 1.4.4 in \cite{KashiwaraBasesCristallinesDesGroupesQuantiques}) gives a means to calculate the dimensions of the weight spaces of $V$. \end{proof}
+
+\begin{rmk} The proposition can be proved geometrically. This is the approach taken in \cite{ZhengGeometricCategorificationTensorProducts}. \end{rmk}
+
+Exactly as in \S\ref{2-morphs}, there are 2-morphisms $X \in \text{End}(E)$ and $T \in \text{End}(E^{2})$ satisfying the relations \ref{CatHeckRelns} and \ref{BraidReln}, giving rise to a morphism $H_{n}(0) \rightarrow \text{End}(E^{n})$ for every $n$. Furthermore, $(G,G^{-1})$, $(G^{-1},G)$, $(E,GF)$, and $(F,G^{-1}E)$ are adjoint pairs of functors, up to a shift (see \ref{UngradAdj}). 
+
+\begin{rmk} We have, in essence, constructed a $U_{q}(\mathfrak{sl}_{2})$-categorification of $V$, in the sense of the higher representation theory programme of Chuang and Rouquier. However, we refrain from using this terminology. Properly justifying it would take us too far afield. \end{rmk}
+
+Fix a parabolic subgroup $P \subset GL_{n}(\mathbb{C})$. We show that the divided powers (see 1.2 in \cite{KashiwaraBasesCristallinesDesGroupesQuantiques}) of $[E]$ and $[F]$ are induced by endofunctors of $\mathcal{T}_{P}(q)$. We have the following diagram, where $p$ and $r$ are the canonical projections. \[ \xymatrix{ & \text{Gr}(i,i+s) \ar[dl]_-{p} \ar[dr]^-{r} & \\ \text{Gr}(i) & & \text{Gr}(i+s)} \] Let $E_{i}^{(s)} = r_{!}p^{*}(\frac{s(n-i-s)}{2}) \colon \text{Gr}(i) \rightarrow \text{Gr}(i+s)$, and $F_{i}^{(s)} = p_{!}r^{*}(\frac{is}{2}) \colon \text{Gr}(i+s) \rightarrow \text{Gr}(i)$. Define $E^{(s)},F^{(s)} \colon \mathcal{T}_{P}(q) \rightarrow \mathcal{T}_{P}(q)$ by $E^{(s)} = \bigoplus_{i=0}^{n} E_{i}^{(s)}$, $F^{(s)} = \bigoplus_{i=0}^{n} F_{i}^{(s)}$. The proof of the following proposition is borrowed from 3.3.3 in \cite{ZhengGeometricCategorificationTensorProducts}.
+
+\begin{prpn} \label{F^nDecom} We have isomorphisms of functors $E^{(s-1)}E \simeq \bigoplus_{j=0}^{s-1} E^{(s)} (\tfrac{s-1-2j}{2})$ and $F^{(s-1)}F \simeq \bigoplus_{j=0}^{s-1} F^{(s)} (\tfrac{s-1-2j}{2})$. \end{prpn}
+
+\begin{proof} Let \[ Y = \{ V_{1} \subset V_{2} \subset V_{3} \mid V_{1} \in \text{Gr}(i), \ V_{2} \in \text{Gr}(i+1), \ V_{3} \in \text{Gr}(i+s), \  V_{1} \subset V_{3}, \ V_{2} \subset V_{3} \}. \] We have the following commutative diagram. The maps are the canonical projections. \[ \xymatrix{ \text{Gr}(i,i+s) \ar[rr]^-{x} \ar[dd]_-{w} &  & \text{Gr}(i+s) \\ & Y \ar[ul]^-{t} \ar[r]^-{v} \ar[d]_-{u} & \text{Gr}(i+1,i+s) \ar[u]_-{r'} \ar[d]^-{p'} \\ \text{Gr}(i) & \text{Gr}(i,i+1) \ar[l]^-{p} \ar[r]_-{r} & \text{Gr}(i+1) } \] 
+
+We have that $E_{i+1}^{(s-1)}E_{i} = r'_{!}p'^{*}r_{!}p^{*}(\frac{s(n+1-i-s)-1}{2})$. By proper base change, $r'_{!}p'^{*}r_{!}p^{*} \simeq r'_{!}v_{!}u^{*}p^{*}$, and hence $E_{i+1}^{(s-1)}E_{i} \simeq x_{!}t_{!}t^{*}w^{*}(\frac{s(n+1-i-s)-1}{2})$. Since $t$ is a $\mathbb{P}^{s-1}$-bundle, $t_{!} \overline{\mathbb{Q}_{l}} \simeq \bigoplus_{j=0}^{s-1} \overline{\mathbb{Q}_{l}}[-2j](-j)$. Thus $t_{!}t^{*} \simeq t_{!} \overline{\mathbb{Q}_{l}} \otimes - \simeq  \bigoplus_{j=0}^{s-1} [-2j](-j)$, and \[ E_{i+1}^{(s-1)}E_{i} \simeq \bigoplus_{j=0}^{s-1} x_{!}w^{*}[-2j](-j)(\tfrac{s(n+1-i-s)-1}{2}) \simeq \bigoplus_{j=0}^{s-1} E_{i}^{(s)}(\tfrac{s-1-2j}{2}). \] 
+
+The second isomorphism is proved similarly. 
+\end{proof}
+
+\begin{cor} We have $[E^{(s)}] = \frac{[E^{s}]}{[s]_{q}!}$ and $[F^{(s)}] = \frac{[F^{s}]}{[s]_{q}!}$. \end{cor}
+
+\end{subsection}
+\end{section}
+
+\begin{section}{Koszul duality}
+
+\begin{subsection}{Koszul duality} \label{KoszDual} Given a tensor product $V$ of simple representations of $U_{q}(\mathfrak{sl}_{2})$, let $\mathcal{T} = \mathcal{T}_{P}(q)$ denote the corresponding triangulated categorification of \ref{QuantWkCat}. In the spirit of Soergel, we outline how to pass to an abelian categorification via Koszul duality, as in 3.6 of \cite{ZhengGeometricCategorificationTensorProducts}.
+
+Let $L_{I}$ denote the direct sum of the simple perverse sheaves in $\mathcal{T} $. Let $\mathcal{L}_{I}$ denote the full subcategory of $\mathcal{T}$ consisting of the semisimple perverse sheaves in $\mathcal{T}$ and their shifts and Tate twists. Let $A = \text{End}^{\bullet}_{\mathcal{T}}(L_{I})$, regarded as an algebra via composition. Then $\text{Ext}^{\bullet}_{\mathcal{T} }(L_{I},-)$ defines a fully faithful functor from $\mathcal{L}_{I}$ to the category $\mathcal{A}$ of finitely generated graded left modules over $A$.
+
+By the decomposition theorem of \cite{BeilinsonBernsteinDeligneFaisceauxPervers}, the endofunctors $E,F$ of $\mathcal{T} $ preserve $\mathcal{L}_{I}$, as does $G$. Let $x,z \in A$, and $y \in \text{Ext}^{\bullet}_{\mathcal{T}}(L_{I},E(L_{I}))$. The action $x \cdot y \cdot z = xyE(z)$ gives $\text{Ext}^{\bullet}_{\mathcal{T}}(L_{I},E(L_{I}))$ the structure of a graded $A$-bimodule, and $\text{Ext}^{\bullet}_{\mathcal{T}}(L_{I},E(L_{I})) \otimes_{A} -$ defines an exact endofunctor $E_{a}$ of $\mathcal{A}$. In the same way, $F$ and $G$ give rise to exact endofunctors $F_{a}$ and $G_{a}$ of $\mathcal{A}$. 
+
+After \ref{QuantRelns}, $E_{a}$, $F_{a}$, and $G_{a}$ induce an action of $U_{q}(\mathfrak{sl}_{2})$ on $K_{0}(\mathcal{A})$. The endomorphisms $X \in \text{End}^{\bullet}(E)$ and $T \in \text{End}^{\bullet}(E^{2})$ induce endomorphisms $X_{a} \in \text{End}(E_{a})$ and $T_{a} \in \text{End}((E_{a})^{2})$ satisfying the relations \ref{CatHeckRelns} and \ref{BraidReln}. This gives $\mathcal{A}$ the structure of an abelian categorification. As in \ref{QuantResults}, $\mathcal{A}$ essentially has the structure of a $U_{q}(\mathfrak{sl}_{2})$-categorification, in the sense of the higher representation theory programme of Chuang and Rouquier.
+
+The indecomposable projective objects of $\mathcal{A}$ are the modules $\text{Ext}^{\bullet}_{\mathcal{T}}(L_{I},K)$, where $K$ is a simple perverse sheaf in $\mathcal{T}$. Thus there is an action of $\mathbb{Z}[q,q^{-1}]$ on $K_{0}(\mathcal{A})$, defined by $q \cdot [\text{Ext}^{\bullet}_{\mathcal{T}}(L_{I},K)] = [\text{Ext}^{\bullet}_{\mathcal{T}}(L_{I},K(-\frac{1}{2})]$. Let $K_{0}(\mathcal{L}_{I})$ denote the Grothendieck group of $\mathcal{L}_{I}$ as an additive category. There is also an action of $\mathbb{Z}[q,q^{-1}]$ on $K_{0}(\mathcal{L}_{I})$, defined by $q \cdot [K] = [K (-\frac{1}{2})]$. 
+
+The functor $\text{Ext}^{\bullet}_{\mathcal{T}}(L_{I},-)$ induces an isomorphism $\mathbb{Q}_{q} \otimes_{\mathbb{Z}[q,q^{-1}]} K_{0}(\mathcal{L}_{I}) \simeq \mathbb{Q}_{q} \otimes_{\mathbb{Z}[q,q^{-1}]} K_{0}(\mathcal{A})$ of $U_{q}(\mathfrak{sl}_{2})$-modules. The $U_{q}(\mathfrak{sl}_{2})$-modules $\mathbb{Q}(q) \otimes_{\mathbb{Z}[q,q^{-1}]} K_{0}(\mathcal{T})$ and $\mathbb{Q}_{q} \otimes_{\mathbb{Z}[q,q^{-1}]} K_{0}(\mathcal{L}_{I})$ are also isomorphic, so the decategorification of $\mathcal{A}$ is $V$.   
+
+\begin{rmk} \label{CanonicalBasis} There is a canonical basis of $V$ consisting of isomorphism classes of the indecomposable projectives in $\mathcal{A}$. In 3.5.9 of \cite{ZhengCategorificationIntegrableRepresentationsQuantumGroups}, Zheng identifies this basis with Lusztig's canonical basis. 
+\end{rmk}
+
+\end{subsection}
+
+\begin{subsection}{An abelian $\mathfrak{sl}_{2}$-categorification of simple representations of $\mathfrak{sl}_{2}$} \label{RecovAbCatSimp} Let $V$ denote the simple representation of $\mathfrak{sl}_{2}$ of dimension $n+1$. In this case, Proposition \ref{sl2Cat} takes the following form.
+
+\begin{prpn} \label{SimpleCat} There are endofunctors $E$ and $F$ and endomorphisms $X \in {\rm End}^{\bullet}(E)$, $T \in {\rm End}^{\bullet}(E^{2})$ giving $\mathcal{T} = \bigoplus_{i=0}^{n} \mathcal{D}_{GL_{n}(\mathbb{C})}({\rm Gr}(i))$ the structure of an $\mathfrak{sl}_{2}$-categorification of $V$. \end{prpn} 
+
+Via Koszul duality (as in \ref{KoszDual}, ignoring Tate twists), $\mathcal{T}$ gives rise to an abelian $\mathfrak{sl}_{2}$-categorification $\mathcal{A}$ of $V$. Indeed, $\mathcal{A}$ is the category of finitely generated graded left modules over the algebra $A = \bigoplus_{i=0}^{n} \text{End}_{\mathcal{D}(\text{Gr}(i))}^{\bullet}(\overline{\mathbb{Q}_{l}}) \simeq \bigoplus_{i=0}^{n} H^{\bullet}(\text{Gr}(i))$. 
+
+Let $E_{a}$ and $F_{a}$ denote the structural endofunctors of $\mathcal{A}$. Regarding $H^{\bullet}(\text{Gr}(i,i+1))$ as an $H^{\bullet}(\text{Gr}(i))\text{-}H^{\bullet}(\text{Gr}(i+1))$-bimodule, we have an isomorphism of functors \[ E_{a}  \simeq \bigoplus_{i=0}^{n} H^{\bullet}(\text{Gr}(i,i+1)) \otimes_{A} -. \]
+
+Regarding $H^{\bullet}(\text{Gr}(i,i+1))$ as an $H^{\bullet}(\text{Gr}(i+1))\text{-}H^{\bullet}(\text{Gr}(i))$-bimodule, we have an isomorphism of functors $F_{a}  \simeq \bigoplus_{i=0}^{n} H^{\bullet}(\text{Gr}(i,i+1)) \otimes_{A} -$.
+
+This agrees with the weak $\mathfrak{sl}_{2}$-categorification of $V$ given in \ref{WeakCatSimps}. The structural endomorphisms $X_{a} \in \text{End}^{\bullet}(E_{a})$ and $T_{a} \in \text{End}^{\bullet}((E_{a})^{2})$ enhance \ref{WeakCatSimps} to an $\mathfrak{sl}_{2}$-categorification of $V$.
+
+\end{subsection}
+
+\end{section}
+
+\bibliography{an_sl2-categorification_of_tensor_products_of_simple_representations_of_sl2} 
+\bibliographystyle{siam}
+\end{document}
