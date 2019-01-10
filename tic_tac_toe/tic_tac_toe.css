@@ -1,0 +1,51 @@
+table, th, td { 
+  border: 1px solid black;
+  border-collapse: collapse;
+}
+
+td {
+  width: 50px;
+  height: 50px;
+  text-align: center;
+}
+
+h1 { 
+  color: black;
+  font-weight: normal;
+  font-size: 3em;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+#entire_screen {
+  text-align: center;
+}
+
+#centered {
+  margin-left: auto;
+  margin-right: auto;
+} 
+
+td.cross {
+  color: red;
+}
+
+td.o {
+  color: green;
+}
+
+p {
+  color: black;
+  font-weight: normal;
+  font-style: italic;
+  display: none;
+  font-size: 1.2em;
+}
+
+button {
+  margin-left: auto;
+  margin-right: auto;
+  display: none;
+}
