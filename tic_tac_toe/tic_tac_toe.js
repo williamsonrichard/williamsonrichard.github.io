@@ -9,10 +9,13 @@ function begin_with_cross() {
 }
 
 function take_turn(x,y) {
+  if (have_won() == true) {
+    return
+  }
   clicked_on_cell = document.getElementById("(" + x.toString() + "," + y.toString() + ")") //Fetch the cell that was clicked on
   if (clicked_on_cell.textContent != "") {
     return
-  }  
+  }
   if (use_cross == true) {
     style_class = "cross"
     content = "X"
@@ -28,7 +31,7 @@ function take_turn(x,y) {
     toggle_visibility_of_play_again_button(true)
   } else if (all_squares_used()) {
     toggle_draw_text(true)
-    toggle_visibility_of_play_again_button(true)          
+    toggle_visibility_of_play_again_button(true)
   }
 }
 
@@ -124,9 +127,9 @@ function all_squares_used() {
       cell = document.getElementById("(" + x.toString() + "," + y.toString() + ")")
       if (cell.textContent == "") {
         return false
-      }      
+      }
     }
-  }  
+  }
   return true
 }
 
@@ -137,7 +140,7 @@ function clear_board() {
     for (y_index in y_coordinates) {
        x = x_coordinates[x_index]
        y = y_coordinates[y_index]
-       cell = document.getElementById("(" + x.toString() + "," + y.toString() + ")")  
+       cell = document.getElementById("(" + x.toString() + "," + y.toString() + ")")
        cell.textContent = "" //Set cell content to be empty
        cell.classList = []
     }
