@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset=utf-8>
+
+<link rel="stylesheet" href="../stylesheet.css">
+
+<title>
+Two competing entities dependent upon a third
+</title>
+
+</head>
+
+<body>
+
+<h1>
+Two competing entities dependent upon a third
+</h1>
+
+<div class="line">
+</div>
+
+<h2>
+Model
+</h2>
+
+<ol>
+<li>Three entities: F, T_1, T_2.</li>
+<li>F ('farmer') produces a product P_F.</li>
+<li>Both T_1 and T_2 ('technicians') produce the same product P_T in single quantities.</li>
+<li>P_F is necessary for T_1's survival in quantity S, and the same for T_2.</li>
+<li>P_T is not necessary for F's survival, and F is interested in at most one delivery of P_T per model cycle.</li>
+<li>P_F can be produced in quantity Q at intervals of duration D_F, and no more than necessary will be produced.</li>
+<li>P_T can be delivered to F at intervals of duration D_T_1 (resp. D_T_2) by T_1 (resp. T_2).</li>
+</ol>
+
+<div class="line">
+</div>
+
+<h2>
+Stability
+</h2>
+
+<p>
+Permanent survival of both T_1 and T_2 can occur only under the following conditions:
+</p>
+
+<ol>
+<li>Repeated delivery of P_T is desirable for F.</li>
+<li>Q is greater than or equal to 2S.</li>
+<li>T_1 and T_2 require exactly the same quantity of P_F for a delivery of P_T.
+<li>At least one of D_T_1 and D_T_2 is less than or equal to D_F, and the other is less than or equal to 2D_F (it is sufficient that both are less than or equal to 2D_F after the first model cycle, or if F is willing to wait two cycles for the first delivery)</li>
+</ol>
+
+<p>
+Indeed, under these conditions, F can deliver P_F in quantity 2S to T_1 (resp. or T_2) in one cycle in exchange for P_T, and deliver P_F in quantity 2S to T_2 (resp. T_1) in the next cycle in exchange for P_T, continuing to alternate in this way.
+</p>
+
+<p>
+Permanent survival of one of T_1 and T_2 can occur only under the following conditions:
+</p>
+
+<ol>
+<li>Repeated delivery of P_T is desirable for F.</li>
+<li>Q is greater than or equal to S.</li>
+<li>At least one of D_T_1 and D_T_2 is less than or equal to D_F.</li>
+</ol>
+
+<p>
+Indeed, under these conditions, F can deliver P_F in quantity S to whichever of T_1 and T_2 requires a smaller quantity of P_F in exchange for a delivery of P_T, assuming that this quantity is greater than or equal to S, and that whichever of D_T_1 and D_T_2 is relevant is less than or equal to D_F. Whichever of T_1 and T_2 requires a larger quantity of P_F, assuming that both meet the delivery time requirement, will not survive.
+</p>
+
+<p>If the cheaper of T_1 and T_2 cannot meet the delivery time requirement, it is possible that neither will survive, even if the more expensive of the two can meet the delivery time requirement: it depends upon the strength of the desirability of P for F, as well as F's evaluation of an acceptable cost of quicker delivery.</p>
+
+<div class="line">
+</div>
+
+<h2>
+Verdict
+</h2>
+
+Survival even of one of T_1 and T_2 is even more fragile than in the <a href="two_entities--one_dependent_upon_the_other.html">case</a> that there is only one 'technician'. In addition to the factors mentioned in that case, either:
+
+<ol>
+<li>An extremely high degree of co-operation between T_1 and T_2 is necessary to ensure equal 'pricing' of P_T; F must produce double as much of P_F; and the logistics of carrying out the alternating deliveries of P_T are more complicated; or</li>
+<li>'Competition' between T_1 and T_2 to lower price leads to uncertainty as to which will survive, as well as the possibility that neither will survive, if the price is driven below S (noting that it is unlikely that S can be estimated precisely).</li>
+</ol>
+
+<div class="line">
+</div>
+
+<h2>
+Variants
+</h2>
+
+<ol>
+<li><p>If, instead of one 'farmer' F, there are two 'farmers' F_1 and F_2, there are a few possibilities. If both F_1 and F_2 are aware of both T_1 and T_2, or F_1 and F_2 are aware of the price the other is paying for P_T (or they co-operate in insisting upon a common price), the model is not significantly altered, and moreover is not significantly altered if further farmers are present: as in the <a href="two_entities--one_dependent_upon_the_other.html">case</a> that there is only one 'technician' but more than one 'farmer', the survival of one or both of T_1 and T_2 over a larger number of cycles becomes more likely due to relaxation of the desirability condition, but ultimate survival is not significantly more likely.</p>
+<p>
+Otherwise  the model reduces either to two independent instances of the <a href="two_entities--one_dependent_upon_the_other.html">case</a> that there is only one 'technician' and one 'farmer', or to one instance of the latter and one of the one-farmer-to-two-technicians case. It is then possible that T_1 and T_2 will both survive, but this this survival is dependent upon a highly fragile lack of awareness/common knowledge/co-operation between F_1 and F_2.
+</p></li>
+<li>Variants 2. and 3. of the <a href="two_entities--one_dependent_upon_the_other.html">case</a> that there is only one 'technician' and one 'farmer' apply essentially unchanged here.</li>
+<li>If one of T_1 or T_2 is able to 'innovate' to create a different product which is desirable for F, the 'competition' aspect of survival can be circumnavigated, and the possibility opens for reduction to two independent instances of the <a href="two_entities--one_dependent_upon_the_other.html">case</a> that there is only one 'technician' and one 'farmer'.</li>
+</ol>
+
+<div class="line">
+</div>
+
+<h2>
+Effect of regulation
+</h2>
+
+<ol>
+<li>F could be required through regulation to produce P_F in quantity 2S at intervals of duration D_F, and to alternate in delivery to T_1 and T_2. The ability of F to produce P_F in sufficient quantities in time is unlikely to be able to regulated, however. In addition, the regulation of the logistiscs of alternating delivery may be complicated.</li>
+<li><p>T_1 and T_2 could be required through regulation to 'sell at the same price' (require the same quantity of P_F for a delivery of T). This removes the possibility of competition between T_1 and T_2 and ensures that either both or neither survives, but overall may make survival of neither more likely, due to the greater demands upon F and the logistic complexity of alternating delivery.</p>
+<p>The common price at which T_1 and T_2 are required to sell might or might not be required by regulation; it does not affect the likelihood of survival significantly. Regulating it will likely avoid the situation that a price less than S is agreed, but since delivery of P_T is subject to its desirability for F, it is of little consequence for T_1 and T_2's survival whether no deal is made due to too high a price being prescribed through regulation, or whether too low a price is agreed.</p></li>
+</ol>
+
+<div class="line">
+</div>
+
+Discussed on the 19th of July 2022.
+
+<div class="line">
+</div>
+
+<p class="updateinfo">
+Last updated: 01:07 (GMT+1), 22nd July 2022<br>
+</p>
+</body>
+
+</html>
