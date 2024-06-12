@@ -1,0 +1,48 @@
+body {
+  max-width: 1250px;
+  font-family: serif;
+  padding: 50px;
+  line-height: 1.5;
+}
+
+img {
+  margin-top: 1em;
+  max-width: 100%;
+}
+
+h1, h2 {
+  font-weight: lighter;
+}
+
+h1:after
+{
+    content: '';
+    display: block;
+    border: 1px solid black;
+    margin-bottom: 1em;
+}
+
+a {
+  padding-bottom: 1px;
+  border-bottom: 1px solid;
+  text-decoration: none;
+  color: #3366CC;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+a:has(img) {
+  padding-bottom: 0px;
+  border-bottom: 0px solid;
+
+}
+
+p:has(img) {
+  text-align: center;
+}
+
+li {
+  margin-bottom: 0.5em;
+}

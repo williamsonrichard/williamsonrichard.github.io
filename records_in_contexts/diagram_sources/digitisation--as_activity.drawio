@@ -1,0 +1,31 @@
+<mxfile host="app.diagrams.net" modified="2024-06-11T20:56:17.605Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.5615.213 Safari/537.36" etag="ZcP3IEj0k-qacX3YjbbB" version="24.5.3" type="device">
+  <diagram name="Page-1" id="ci9HKcbt9n32aLSZLmGC">
+    <mxGraphModel dx="878" dy="561" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="4681" pageHeight="3300" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="9VjuFNt3WVQM42J1xvUr-1" value="Digitisation" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;strokeColor=#FFFAA0;strokeWidth=3;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="230" y="270" width="140" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="9VjuFNt3WVQM42J1xvUr-2" value="rico:Activity" style="text;strokeColor=#FFFAA0;strokeWidth=3;fillColor=none;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="9VjuFNt3WVQM42J1xvUr-1" vertex="1">
+          <mxGeometry y="26" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="9VjuFNt3WVQM42J1xvUr-3" value="Scanning" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;strokeColor=#FFFAA0;strokeWidth=3;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="560" y="270" width="140" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="9VjuFNt3WVQM42J1xvUr-4" value="rico:Activity" style="text;strokeColor=#FFFAA0;strokeWidth=3;fillColor=none;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="9VjuFNt3WVQM42J1xvUr-3" vertex="1">
+          <mxGeometry y="26" width="140" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="9VjuFNt3WVQM42J1xvUr-5" value="" style="endArrow=classic;html=1;rounded=0;entryX=-0.021;entryY=-0.077;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" parent="1" source="9VjuFNt3WVQM42J1xvUr-1" target="9VjuFNt3WVQM42J1xvUr-4" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="380" y="295" as="sourcePoint" />
+            <mxPoint x="550" y="295" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="9VjuFNt3WVQM42J1xvUr-6" value="rico:hasOrHadSubevent" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" parent="9VjuFNt3WVQM42J1xvUr-5" connectable="0" vertex="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

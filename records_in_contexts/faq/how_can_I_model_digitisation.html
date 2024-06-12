@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>faq--how_can_I_model_digitisation</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="../css/faq.css" />
+</head>
+<body>
+<h1 id="how-can-i-model-digitisation">How can I model digitisation?</h1>
+<h2
+id="does-one-digitise-a-record-resource-or-an-instantiation-of-it">Does
+one digitise a record resource or an instantiation of it?</h2>
+<p>We suggest that one typically digitises an Instantiation (RiC-E06).
+To see why, consider the purposes of digitisation. It may make a Record
+Resource (RiC-E02) more widely available: online, or via another
+electronic channel. Or it may contribute to more robust preservation of
+the Record Resource: storing it in another medium. In both cases, the
+intellectual aspect of the Record Resource — the information it holds —
+is essentially unaltered; only the means of inscription of that
+information, that is to say its instantiation, has changed.</p>
+<p>That said, a digitisation might subsequently be enriched
+intellectually. Suppose for example one were to take a Record (RiC-E04)
+which is a certain text, and digitise it to a format which includes the
+possibility of making comments. Suppose that one indeed does then add
+comments in various places. The resulting file could certainly be
+regarded as an instantiation of a new Record. Nevertheless, we suggest
+not to view this kind of enrichment as part of digitisation itself.</p>
+<h2 id="digitisation-as-an-activity">Digitisation as an activity</h2>
+<p>Digitisation can be understood very broadly, encompassing all kinds
+of media (visual, audio, and so on) and mechanisms: not only scanning of
+a text, say, but human transcription (working from a non-electronic
+source) of it could be seen to fall under it. At this level,
+digitisation can be modelled as an Activity (RiC-E15).</p>
+<p>A specific form of digitisation such as scanning too can be modelled
+as an Activity. It can be related to the Activity of digitisation as a
+whole by <em>is or was subevent of</em> (RiC-R006i) or its inverse
+<em>has or had subevent</em> (RiC-R006).</p>
+<p><a href="../diagrams/digitisation--as_activity.svg"><img
+src="../diagrams/digitisation--as_activity.svg"
+alt="Digitisation as activity" /></a></p>
+<h2 id="digitisation-as-an-event">Digitisation as an event</h2>
+<p>The digitisation of a particular Instantiation (RiC-E06) can be
+modelled by an Event (RiC-E14). This Event can be related to the
+Activity of digitisation described above — or, better, one of its more
+specific forms, such as the Activity of scanning — by <em>is or was
+subevent of</em> (RiC-R006i) or its inverse (RiC-R006).</p>
+<p>Furthermore, <em>is or was affected by</em> (RiC-R059i) or its
+inverse <em>affects or affected</em> (RiC-R059) can be used to relate
+the original Instantiation to the digitisation Event, whilst <em>results
+or resulted in</em> (RiC-R061) or its inverse <em>results or resulted
+from</em> (RiC-R061i) can be used to relate the digitisation Event to
+the digitised Instantiation one ends up with.</p>
+<p>In addition, we suggest use of <em>has or had derived
+instantiation</em> (RiC-R014) to relate the original Instantiation to
+the digitised one. Putting everything together, we end up with an
+example as follows, for which we provide a <a
+href="../ric-o_examples/digitisation--basic.owl">RiC-O
+formulation</a>.</p>
+<p><a href="../diagrams/digitisation--basic.svg"><img
+src="../diagrams/digitisation--basic.svg"
+alt="Basic digitisation modelling" /></a></p>
+<p>In the example, we make use of
+<em>rico:hasOrHadAnalogueInstantiation</em> and
+<em>rico:hasOrHadDigitalInstantiation</em>, which are currently
+available only in RiC-O, not in RiC-CM. In RiC-CM, one can simply use
+<em>has or had instantiation</em> (RiC-R025) in both cases.</p>
+<h2 id="richer-modelling">Richer modelling</h2>
+<p>A number of other attributes and relations can be made use of to
+enrich a basic modelling of digitisation as above. For example:</p>
+<ul>
+<li><em>is or was performed by</em> (RiC-R060) or its inverse
+<em>performs or performed</em> (RiC-R060i), for expressing who carried
+out the digitisation, or for which software or hardware was used,
+recalling the possibility of a Mechanism (RiC-E13) as Agent;</li>
+<li><em>occurred at date</em> (RiC-R084) or its inverse <em>is date of
+occurrence of</em> (RiC-R084i), for expressing when the digitisation
+took place;</li>
+<li><em>is or was regulated by</em> (RiC-R063i) or its inverse
+<em>regulates or regulated</em> (RiC-R063), for referring to an
+institutional policy, perhaps derived from funding, under whose umbrella
+the digitisation falls, or to laws or policies which govern the use of
+the digitised instantiation.</li>
+</ul>
+<p>The example below, for which we provide a <a
+href="../ric-o_examples/digitisation--enriched.owl">RiC-O
+formulation</a>, illustrates this. Other uses of <em>is or was regulated
+by</em> (RiC-R063i) might have the digitisation Event as their domain
+rather than the digitised Instantiation.</p>
+<p><a href="../diagrams/digitisation--enriched.svg"><img
+src="../diagrams/digitisation--enriched.svg"
+alt="Enriched digitisation modelling" /></a></p>
+<p>If the digitised instantiation in this example were in such a format
+as to allow for comments, and if it were to be annotated through such
+comments so as to be able to be judged, as per the discussion above, an
+instantiation of a new record, one can as always use <em>has or had
+instantiation</em> (RiC-R025) or its inverse <em>is or was instantiation
+of</em> (RiC-R025i) to relate the new record to its instantiation. In
+addition, <em>has genetic link to record resource</em> (RiC-R023) can be
+used to relate the original record to the new one. The following example
+illustrates this. We provide a <a
+href="../ric-o_examples/digitisation--basic--new_record.owl">RiC-O
+formulation</a>.</p>
+<p><a href="../diagrams/digitisation--basic--new_record.svg"><img
+src="../diagrams/digitisation--basic--new_record.svg"
+alt="Digitisation resulting in new record modelling" /></a></p>
+<h2 id="digitisation-of-a-record-part-or-record-set">Digitisation of a
+Record Part or Record Set</h2>
+<p>Though we have focused above upon an Instantiation of a Record
+(RiC-E04), everything could equally have been said for an instantiation
+of a Record Part (RiC-E05). It alse makes sense to speak of digitisation
+of an instantiation of a Record Set (RiC-E03). The nuances of the
+semantics are slightly different, but the modelling we have described
+above still goes through, noting the following:</p>
+<ul>
+<li>The entity Date (RiC-E18) encompasses both single dates and periods
+of time, the two being distinguished by Date Type (RiC-A42). A period of
+time is likely to be appropriate when modelling digitisation of a Record
+Set.</li>
+<li>The relation <em>is or was performed by</em> (RiC-R060) is
+many-to-many, and thus, if the digitisation of a Record Set was carried
+out by several agents, there is no barrier to including all of them
+through several applications of this relation. The same goes for many
+other relations.</li>
+<li>As ever, one can relate the digitisation of an Instantiation of a
+Record Set to a digitisation of an Instantiation of a Record within this
+Record Set by means of the <em>has or had component</em> (RiC-R004)
+relation or its inverse <em>is or was component of</em>
+(RiC-R004i).</li>
+</ul>
+<p>The example below illustrates some aspects of this. We provide a <a
+href="../ric-o_examples/digitisation--record_set.owl">RiC-O
+formulation</a>.</p>
+<p><a href="../diagrams/digitisation--record_set.svg"><img
+src="../diagrams/digitisation--record_set.svg" style="width:100.0%"
+alt="Record set digitisation modelling" /></a></p>
+</body>
+</html>

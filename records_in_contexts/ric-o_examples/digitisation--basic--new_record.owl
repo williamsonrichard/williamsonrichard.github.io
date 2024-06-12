@@ -1,0 +1,56 @@
+Individual: Digitisation
+  Annotations:
+    rdfs:label "Digitisation"
+  Types: rico:Activity
+  Facts:
+    rico:hasOrHadSubevent Scanning
+
+Individual: Scanning
+  Annotations:
+    rdfs:label "Scanning"
+  Types: rico:Activity
+  Facts:
+    rico:hasOrHadSubevent DigitisationOfDeaconBook--Klokkerbok--L0343
+
+Individual: StrindaClericalDistrict---BratsbergParish---1938-1952
+  Annotations:
+    rdfs:label "Strinda clerical district, Bratsberg parish, 1938-1952"
+  Types: rico:Record
+  Facts:
+    rico:hasOrHadAnalogueInstantiation DeaconBook--Klokkerbok--L0343,
+    rico:hasOrHadDigitalInstantiation DigitisedDeaconBook--Klokkerbok--L0343,
+    rico:hasGeneticLinkToRecordResource StrindaClericalDistrict---BratsbergParish---1938-1952---Annotated
+
+Individual: DeaconBook--Klokkerbok--L0343
+  Annotations:
+    rdfs:label "Deacon Book (Klokkerbok) L0343"
+  Types: rico:Instantiation
+  Facts:
+    rico:isOrWasAffectedBy DigitisationOfDeaconBook--Klokkerbok--L0343,
+    rico:hasOrHadDerivedInstantiation DigitisedDeaconBook--Klokkerbok--L0343
+
+Individual: DigitisedDeaconBook--Klokkerbok--L0343
+  Annotations:
+    rdfs:label "Digitised Deacon Book (Klokkerbok) L0343"
+  Types: rico:Instantiation
+
+Individual: DigitisationOfDeaconBook--Klokkerbok--L0343
+  Annotations:
+    rdfs:label "Digitisation of Deacon Book (Klokkerbok) L0343 "
+  Types: rico:Event
+  Facts:
+    rico:resultsOrResultedIn DigitisedDeaconBook--Klokkerbok--L0343
+
+Individual: Annotation
+  Annotations:
+    rdfs:label "Annotation"
+  Types: rico:Activity
+  Facts:
+    rico:affectsOrAffected DigitisedDeaconBook--Klokkerbok--L0343
+
+Individual: StrindaClericalDistrict---BratsbergParish---1938-1952---Annotated
+  Annotations:
+    rdfs:label "Strinda clerical district, Bratsberg parish, 1938-1952, annotated"
+  Types: rico:Record
+  Facts:
+    rico:hasOrHadDigitalInstantiation DigitisedDeaconBook--Klokkerbok--L0343

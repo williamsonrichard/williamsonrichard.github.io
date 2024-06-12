@@ -1,0 +1,253 @@
+<mxfile host="app.diagrams.net" modified="2024-06-11T22:52:18.073Z" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.5615.213 Safari/537.36" etag="dXCwuJspcPTwF2jsbTwp" version="24.5.3" type="device">
+  <diagram name="Page-1" id="9dDk0zf2ElysKSQKNrrg">
+    <mxGraphModel dx="1596" dy="1020" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="3300" pageHeight="2339" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="KS-wqAkKazjO4-zXT2j7-1" value="Digitisation" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;strokeColor=#FFFAA0;strokeWidth=3;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="650" y="240" width="150" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="KS-wqAkKazjO4-zXT2j7-2" value="rico:Activity" style="text;strokeColor=#FFFAA0;strokeWidth=3;fillColor=none;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="KS-wqAkKazjO4-zXT2j7-1" vertex="1">
+          <mxGeometry y="26" width="150" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="KS-wqAkKazjO4-zXT2j7-3" value="Scanning" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;strokeColor=#FFFAA0;strokeWidth=3;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="650" y="380" width="150" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="KS-wqAkKazjO4-zXT2j7-4" value="rico:Activity" style="text;strokeColor=#FFFAA0;strokeWidth=3;fillColor=none;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="KS-wqAkKazjO4-zXT2j7-3" vertex="1">
+          <mxGeometry y="26" width="150" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="KS-wqAkKazjO4-zXT2j7-5" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;exitX=0.497;exitY=1.077;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="KS-wqAkKazjO4-zXT2j7-2" target="KS-wqAkKazjO4-zXT2j7-3" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="835" y="310" as="sourcePoint" />
+            <mxPoint x="775" y="270" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KS-wqAkKazjO4-zXT2j7-6" value="rico:hasOrHadSubevent" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" parent="KS-wqAkKazjO4-zXT2j7-5" connectable="0" vertex="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KS-wqAkKazjO4-zXT2j7-7" value="Strinda clerical district, Bratsberg parish, 1938-1952" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;strokeColor=#DAEEF3;strokeWidth=3;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="920" y="960" width="340" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="KS-wqAkKazjO4-zXT2j7-8" value="rico:Record" style="text;strokeColor=#DAEEF3;strokeWidth=3;fillColor=none;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="KS-wqAkKazjO4-zXT2j7-7" vertex="1">
+          <mxGeometry y="26" width="340" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="KS-wqAkKazjO4-zXT2j7-9" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.094;entryY=0.981;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.821;exitY=-0.003;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" source="KS-wqAkKazjO4-zXT2j7-14" target="HIHmw64CFz3xZAufGdiX-4" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="952" y="810" as="sourcePoint" />
+            <mxPoint x="1140" y="630" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KS-wqAkKazjO4-zXT2j7-10" value="rico:isOrWasAffectedBy" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" parent="KS-wqAkKazjO4-zXT2j7-9" connectable="0" vertex="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KS-wqAkKazjO4-zXT2j7-11" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.059;entryY=-0.043;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" target="KS-wqAkKazjO4-zXT2j7-20" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1240" y="742" as="sourcePoint" />
+            <mxPoint x="1240.146" y="815.4759999999999" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KS-wqAkKazjO4-zXT2j7-12" value="rico:resultsOrResultedIn" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" parent="KS-wqAkKazjO4-zXT2j7-11" connectable="0" vertex="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="KS-wqAkKazjO4-zXT2j7-14" value="Deacon Book (Klokkerbok) L0343" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;strokeColor=#F5DEB3;strokeWidth=2;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="670" y="820" width="269" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="KS-wqAkKazjO4-zXT2j7-15" value="rico:Instantiation&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=#F5DEB3;strokeWidth=2;fillColor=#F5DEB3;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="KS-wqAkKazjO4-zXT2j7-14" vertex="1">
+          <mxGeometry y="26" width="269" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="KS-wqAkKazjO4-zXT2j7-17" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.781;entryY=1;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.053;exitY=0.014;exitDx=0;exitDy=0;exitPerimeter=0;" parent="1" target="KS-wqAkKazjO4-zXT2j7-15" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="955.3700000000001" y="955.442" as="sourcePoint" />
+            <mxPoint x="955.1529999999998" y="871.9960000000001" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KS-wqAkKazjO4-zXT2j7-18" value="rico:hasOrHadAnalogueInstantiation" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" parent="KS-wqAkKazjO4-zXT2j7-17" connectable="0" vertex="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-60" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KS-wqAkKazjO4-zXT2j7-20" value="Digitised Deacon Book (Klokkerbok) L0343" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;strokeColor=#F5DEB3;strokeWidth=2;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="1300" y="820" width="269" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="KS-wqAkKazjO4-zXT2j7-21" value="rico:Instantiation&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=#F5DEB3;strokeWidth=2;fillColor=#F5DEB3;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="KS-wqAkKazjO4-zXT2j7-20" vertex="1">
+          <mxGeometry y="26" width="269" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="HIHmw64CFz3xZAufGdiX-1" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.935;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.077;entryY=0.933;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="KS-wqAkKazjO4-zXT2j7-7" edge="1" target="KS-wqAkKazjO4-zXT2j7-21">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1135" y="1002.9860000000001" as="sourcePoint" />
+            <mxPoint x="1320" y="880" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HIHmw64CFz3xZAufGdiX-2" value="rico:hasOrHadDigitalInstantiation" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" parent="HIHmw64CFz3xZAufGdiX-1" connectable="0" vertex="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="HIHmw64CFz3xZAufGdiX-3" value="Digitisation of Deacon Book (Klokkerbok) L0343&amp;nbsp;" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;strokeColor=#FFFAA0;strokeWidth=2;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" parent="1" vertex="1">
+          <mxGeometry x="920" y="690" width="340" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="HIHmw64CFz3xZAufGdiX-4" value="rico:Event" style="text;strokeColor=#FFFAA0;strokeWidth=2;fillColor=#FFFAA0;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="HIHmw64CFz3xZAufGdiX-3" vertex="1">
+          <mxGeometry y="26" width="340" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="HIHmw64CFz3xZAufGdiX-5" value="" style="endArrow=classic;html=1;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=0;exitX=0.507;exitY=1.154;exitDx=0;exitDy=0;exitPerimeter=0;curved=1;" parent="1" source="KS-wqAkKazjO4-zXT2j7-4" edge="1" target="HIHmw64CFz3xZAufGdiX-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1079.5" y="610" as="sourcePoint" />
+            <mxPoint x="1079.5" y="690" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="720" y="610" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HIHmw64CFz3xZAufGdiX-6" value="rico:hasOrHadSubevent" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" parent="HIHmw64CFz3xZAufGdiX-5" connectable="0" vertex="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint y="-72" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HIHmw64CFz3xZAufGdiX-7" value="" style="endArrow=classic;html=1;rounded=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" parent="1" source="KS-wqAkKazjO4-zXT2j7-14" target="KS-wqAkKazjO4-zXT2j7-20" edge="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="890" y="845" as="sourcePoint" />
+            <mxPoint x="1110" y="845" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="HIHmw64CFz3xZAufGdiX-8" value="rico:hasOrHadDerivedInstantiation" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" parent="HIHmw64CFz3xZAufGdiX-7" connectable="0" vertex="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_yXDYFylitKw3rUIxr-C-1" value="Strinda clerical district, Bratsberg parish, 1797-1961" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;strokeColor=#DAEEF3;fillColor=none;strokeWidth=3;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="939" y="1090" width="310" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="_yXDYFylitKw3rUIxr-C-2" value="rico:RecordSet" style="text;strokeColor=#DAEEF3;strokeWidth=3;fillColor=none;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="_yXDYFylitKw3rUIxr-C-1">
+          <mxGeometry y="26" width="310" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="_yXDYFylitKw3rUIxr-C-3" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1076" y="1090" as="sourcePoint" />
+            <mxPoint x="1076" y="1010" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_yXDYFylitKw3rUIxr-C-4" value="rico:includesOrIncluded" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="_yXDYFylitKw3rUIxr-C-3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_yXDYFylitKw3rUIxr-C-5" value="Parish registers (Kirkebøker) L0332 - L0345" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;strokeColor=#F5DEB3;strokeWidth=2;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="200" y="820" width="259" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="_yXDYFylitKw3rUIxr-C-6" value="rico:Instantiation&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=#F5DEB3;strokeWidth=2;fillColor=#F5DEB3;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="_yXDYFylitKw3rUIxr-C-5">
+          <mxGeometry y="26" width="259" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="_yXDYFylitKw3rUIxr-C-9" value="" style="endArrow=classic;html=1;rounded=0;entryX=-0.005;entryY=0.156;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" target="KS-wqAkKazjO4-zXT2j7-15">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="459" y="850" as="sourcePoint" />
+            <mxPoint x="629" y="850" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_yXDYFylitKw3rUIxr-C-10" value="rico:hasOrHadComponent" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="_yXDYFylitKw3rUIxr-C-9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_yXDYFylitKw3rUIxr-C-11" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.602;exitY=-0.091;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=0.75;entryDx=0;entryDy=0;" edge="1" parent="1" source="_yXDYFylitKw3rUIxr-C-5" target="_yXDYFylitKw3rUIxr-C-17">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="690" y="778" as="sourcePoint" />
+            <mxPoint x="750" y="630" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_yXDYFylitKw3rUIxr-C-12" value="rico:isOrWasAffectedBy" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="_yXDYFylitKw3rUIxr-C-11">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_yXDYFylitKw3rUIxr-C-13" value="Digitised Parish registers (Kirkebøker) L0332 - L0345" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;strokeColor=#F5DEB3;strokeWidth=2;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1770" y="820" width="360" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="_yXDYFylitKw3rUIxr-C-14" value="rico:Instantiation&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=#F5DEB3;strokeWidth=2;fillColor=#F5DEB3;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="_yXDYFylitKw3rUIxr-C-13">
+          <mxGeometry y="26" width="360" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="_yXDYFylitKw3rUIxr-C-15" value="" style="endArrow=classic;html=1;rounded=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="_yXDYFylitKw3rUIxr-C-13" target="KS-wqAkKazjO4-zXT2j7-20">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1630" y="910" as="sourcePoint" />
+            <mxPoint x="1840" y="910" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_yXDYFylitKw3rUIxr-C-16" value="rico:hasOrHadComponent" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="_yXDYFylitKw3rUIxr-C-15">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_yXDYFylitKw3rUIxr-C-17" value="Digitisation of parish registers (kirkebøker) L0332 - L0345" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;strokeColor=#FFFAA0;strokeWidth=2;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="920" y="520" width="340" height="52" as="geometry" />
+        </mxCell>
+        <mxCell id="_yXDYFylitKw3rUIxr-C-18" value="rico:Event" style="text;strokeColor=#FFFAA0;strokeWidth=2;fillColor=#FFFAA0;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="_yXDYFylitKw3rUIxr-C-17">
+          <mxGeometry y="26" width="340" height="26" as="geometry" />
+        </mxCell>
+        <mxCell id="_yXDYFylitKw3rUIxr-C-19" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.296;entryY=-0.067;entryDx=0;entryDy=0;exitX=1.005;exitY=0.067;exitDx=0;exitDy=0;exitPerimeter=0;entryPerimeter=0;" edge="1" parent="1" source="KS-wqAkKazjO4-zXT2j7-4" target="_yXDYFylitKw3rUIxr-C-17">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="860" y="304" as="sourcePoint" />
+            <mxPoint x="860" y="390" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_yXDYFylitKw3rUIxr-C-20" value="rico:hasOrHadSubevent" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="_yXDYFylitKw3rUIxr-C-19">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_yXDYFylitKw3rUIxr-C-21" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.473;entryY=-0.019;entryDx=0;entryDy=0;entryPerimeter=0;exitX=0.473;exitY=0.923;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="_yXDYFylitKw3rUIxr-C-18" target="HIHmw64CFz3xZAufGdiX-3">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1080" y="580" as="sourcePoint" />
+            <mxPoint x="1310" y="719" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_yXDYFylitKw3rUIxr-C-22" value="rico:hasOrHadSubevent" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="_yXDYFylitKw3rUIxr-C-21">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_yXDYFylitKw3rUIxr-C-23" value="" style="endArrow=classic;html=1;rounded=0;entryX=0.378;entryY=0.053;entryDx=0;entryDy=0;entryPerimeter=0;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="_yXDYFylitKw3rUIxr-C-17" target="_yXDYFylitKw3rUIxr-C-13">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1410" y="550" as="sourcePoint" />
+            <mxPoint x="1486" y="626" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_yXDYFylitKw3rUIxr-C-24" value="rico:resultsOrResultedIn" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="_yXDYFylitKw3rUIxr-C-23">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_yXDYFylitKw3rUIxr-C-25" value="" style="endArrow=classic;html=1;rounded=0;exitX=-0.002;exitY=0.067;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.563;entryY=1.173;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="_yXDYFylitKw3rUIxr-C-2" target="_yXDYFylitKw3rUIxr-C-6">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="585.3700000000001" y="1123.442" as="sourcePoint" />
+            <mxPoint x="360" y="880" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_yXDYFylitKw3rUIxr-C-26" value="rico:hasOrHadAnalogueInstantiation" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="_yXDYFylitKw3rUIxr-C-25">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-60" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_yXDYFylitKw3rUIxr-C-27" value="" style="endArrow=classic;html=1;rounded=0;exitX=1.014;exitY=0.067;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="_yXDYFylitKw3rUIxr-C-2">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1390" y="1090" as="sourcePoint" />
+            <mxPoint x="1860" y="880" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_yXDYFylitKw3rUIxr-C-28" value="rico:hasOrHadDigitalInstantiation" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="_yXDYFylitKw3rUIxr-C-27">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_yXDYFylitKw3rUIxr-C-29" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.594;exitY=-0.019;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="_yXDYFylitKw3rUIxr-C-17">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1080" y="480.0000000000002" as="sourcePoint" />
+            <mxPoint x="1250" y="420" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_yXDYFylitKw3rUIxr-C-30" value="rico:occurredAtDate" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="_yXDYFylitKw3rUIxr-C-29">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="_yXDYFylitKw3rUIxr-C-31" value="2005 - 2007" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;strokeColor=#DDD9C3;strokeWidth=2;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1210" y="370" width="100" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="_yXDYFylitKw3rUIxr-C-32" value="rico:Date" style="text;strokeColor=#DDD9C3;strokeWidth=2;fillColor=#DDD9C3;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="_yXDYFylitKw3rUIxr-C-31">
+          <mxGeometry y="26" width="100" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="_yXDYFylitKw3rUIxr-C-33" value="2005-11-02" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=26;strokeColor=#DDD9C3;strokeWidth=2;fillColor=none;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="1440" y="490" width="100" height="48" as="geometry" />
+        </mxCell>
+        <mxCell id="_yXDYFylitKw3rUIxr-C-34" value="rico:Date" style="text;strokeColor=#DDD9C3;strokeWidth=2;fillColor=#DDD9C3;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" vertex="1" parent="_yXDYFylitKw3rUIxr-C-33">
+          <mxGeometry y="26" width="100" height="22" as="geometry" />
+        </mxCell>
+        <mxCell id="_yXDYFylitKw3rUIxr-C-35" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.594;exitY=-0.019;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0;entryY=1;entryDx=0;entryDy=0;" edge="1" parent="1" target="_yXDYFylitKw3rUIxr-C-33">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1260" y="690" as="sourcePoint" />
+            <mxPoint x="1388" y="591" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="_yXDYFylitKw3rUIxr-C-36" value="rico:occurredAtDate" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="_yXDYFylitKw3rUIxr-C-35">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
