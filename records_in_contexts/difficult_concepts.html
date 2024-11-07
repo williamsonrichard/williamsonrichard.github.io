@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <title>difficult_concepts</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    /* The extra [class] is a hack that increases specificity enough to
+       override a similar rule in reveal.js */
+    ul.task-list[class]{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      font-size: inherit;
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1.6em;
+      vertical-align: middle;
+    }
+    .display.math{display: block; text-align: center; margin: 0.5rem auto;}
+  </style>
+  <link rel="stylesheet" href="css/faq.css" />
+</head>
+<body>
+<h1 id="concepts-guidance-difficult-concepts">Concepts guidance
+(‘difficult concepts’)</h1>
+<h2 id="do-i-have-a-record-resource-record-set-record-or-record-part">Do
+I have a record resource, record set, record, or record part?</h2>
+<p>The short answer is: don’t worry about it too much! In traditional
+settings, the distinction is usually clear: a record might typically be
+a paper document of some kind, one</p>
+<blockquote>
+<p>made or received in the course of a practical activity as an
+instrument or a by-product of such activity, and set aside for action or
+reference</p>
+</blockquote>
+<p>in InterPARES’s definition, whereas a record set would consist of
+multiple distinct documents.</p>
+<p>When it comes to digital-born material, the boundary between a record
+and a record set is sometimes harder to pin down. In a table of yearly
+import data created by a tax/customs authority, is the entire table a
+record, or is each row (corresponding to a single import) a record, and
+the table itself rather a record set? Again, it typically doesn’t really
+matter too much in practice for RiC, as many attributes and relations in
+RiC are common to both records and record sets; if you do wish to make
+use of a certain attribute or relation that is only available for one of
+them (e.g. <em>is draft of</em> (RiC-R011), only for a record), that is
+a strong indication as to which you have!</p>
+<p>That said, the table of import data might best be considered a
+record, for several reasons. Firstly, the tax/customs authority itself
+publishes the table as a whole yearly, it does not publish the
+individual rows until that time. Thus, considering the entire table as a
+record better reflects the reality that it was under continual creation
+by the tax/customs authority during the year. Secondly, the rows of such
+a table will typically be expressed in a certain format, often quite
+compact and tightly defined, that was designed for the table as a whole
+— for recording of import activity in general. The rows are subsumed by
+this overall schema.</p>
+<p>As RiC-CM puts it:</p>
+<blockquote>
+<p>The most prominent difference in the description of record set and
+record is that the identity of the record is directly derived from the
+record itself… Similarly, the identity of [a] record part is dependent
+on and derived from the record of which it is a part.</p>
+</blockquote>
+<p>It can be useful to compare to similar examples for analogue
+material. A yearly table of import data is not too dissimilar to a
+parish register; this would certainly traditionally be considered a
+record, whereas each individual entry of a baptism, marriage, or death
+would not be.</p>
+<p>When such analogies are not readily apparent, the fact that a record
+has an aspect of ‘wholeness’ or ‘completeness’ will likely be the best
+guide. For instance, an entire relational database might best be
+considered a record, not a record set, as the tables are typically
+intertwined by foreign keys and defined by an overall schema; usage of
+the database (querying it) may well necessitate joins across tables,
+whilst adding the data of one input event might involve insertion into
+several tables.</p>
+<p>Not having too narrow a conception of record can be practically very
+helpful. Having fewer records with a higher quality of archival
+description will likely lead to a richer context and easier discovery of
+material. It will also likely make a transition to RiC from an older
+paradigm easier.</p>
+<p>In previous approaches to archival description, positioning record
+sets at different hierarchical levels (fonds, series, …) has been
+important. This is much less of true of RiC, which allows for
+considerable flexibility in describing the structure of record sets:</p>
+<ul>
+<li>Any kind of hierarchy can be expressed by means of properties such
+as <em>includes or included</em> (RiC-R024).</li>
+<li>To express sequences, one has <em>follows or followed</em>
+(RiC-R008i) and more.</li>
+</ul>
+<p>Because of this, although RiC does have an attribute Record Set Type
+(RiC-A36) available to categorise a record set, one need not be hasty in
+using it. The spirit of RiC is much more towards simply identifying that
+one has a record set, and then elaborating upon its structure to the
+degree appropriate in a given context.</p>
+<p>RiC’s notion of a record part (RiC-E05) too is very flexible: it
+could be a page of a document or an email attachment, but also a line or
+a word. In the import activity example above, it might be an entire row,
+or an entry in one column of that row. In the relational database
+example, it might be an entire table, a row in one of the tables, an
+entry in one such row, or a structural aspect such as a foreign key.</p>
+<p>What of a record resource (RiC-E02)? This is more of a placeholder,
+convenient at a meta-level for when one does not need or wish to specify
+whether one has a record set, record, or record part. It is used
+frequently in this way both in RiC-CM and RiC-O. When it comes to actual
+data, whilst there can be use-cases for record resource, it should
+likely rarely be used; one should rather make a choice as to whether one
+has a record set or a record (in the given context).</p>
+<p>Instantiations (RiC-E06) have little bearing upon whether we have a
+record set, record, or record part, but a point sometimes overlooked is
+that consideration of instantiations is relevant for many kinds of
+record set, not only records. One can perfectly well consider the
+digitisation of an entire photo collection, for instance, the
+instantiation being a digital photo album. Or the digitisation of all of
+the material in a fonds, not only specific series or records, the
+instantiation being a HTML page which serves as a landing page for
+accessing the digitised material (i.e. with all of the digitised at
+least implicitly linked to it).</p>
+<p>All this is despite the fact that RiC-CM does not (unlike for a
+record) <em>require</em> that a record set have an instantiation. This
+is to allow for groupings/aggregations of records that are meaningful
+intellectually, but not reflected in a physical gathering of material:
+the private papers of a certain individual might for instance be split
+between two different institutions, each half having an instantiatiation
+(certain files on a shelf of their holding institution), whilst the
+whole does not, at least in the context of, say, curation.</p>
+<p>A second point worth emphasising is that RiC allows for flexibility
+in the description of the structure of an instantiation too. For
+instance, the relation <em>has or had component</em> (RiC-R004) can be
+used for instantiations in a very similar way as <em>includes or
+included</em> (RiC-R024) for record sets.</p>
+<h2
+id="do-i-have-an-activity-or-an-event-can-i-ignore-both-to-begin-with">Do
+I have an Activity or an Event? Can I ignore both to begin with?</h2>
+<p>To consider the second question first, if one is coming to RiC from
+an earlier approach to archival description, it is quite conceivable
+that Event (RiC-E14) and Activity (RiC-E15) are those entities which one
+will take into use last. Yet they are perhaps the key entities for fully
+opening up the rich possibilities that RiC offers!</p>
+<p>Take for instance what is known as ‘functional provenance’: the
+‘practical activity’ of the InterPARES definition of a record above.
+Traditionally, this might well have been incorporated into an archival
+description in an unstructured way, in free-text notes. RiC fully allows
+for continuation of this practice by means of the attribute Scope and
+Content (RiC-A38) — one of RiC’s characteristics in general is that one
+does not need to make a seismic shift to it from an older archival
+description paradigm, it allows for bridging the two gradually.</p>
+<p>But it is the relation <em>documents</em> (RiC-R033), which has the
+Activity (RiC-E15) entity as its range, that is specifically intended to
+detail the ‘practical activity’ out of which a record arises. Expressing
+functional provenance in this structured way has several benefits.
+Firstly, it allows for precise use of it in exploration of and search
+amongst archival descriptions. For example, if ‘school administration’
+(in a certain geographical or political domain) is the practical
+activity, expressing this using <em>documents</em> would allow for
+answering questions such as: which record sets documenting school
+administration were created between 2000 and 2010?</p>
+<p>Secondly, an Activity can itself be described by means of a number of
+relations and attributes. For example, <em>affects or affected</em>
+(RiC-R059), which in the school administration example could be made use
+of to list those schools within scope; or <em>is or was subevent of</em>
+(RiC-R006i), which might be used to view school administration as a
+special case of municipal (say) administration. In this way the activity
+becomes part of a rich context.</p>
+<p>But Activity (RiC-E15) has considerably broader applicability. In
+fact, as a rule of thumb, if you are not sure how to model something in
+RiC, try Activity! Digitisation, appraisal, accrual, arranging,
+publishing, …; it can be used for all of these, indeed for most aspects
+of everyday archival practice.</p>
+<p>A typical pattern would be as follows:</p>
+<ul>
+<li>One uses <em>is or was affected by</em> (RiC-R059i) to connect an
+activity to a record set, record, record part, or instantiation.</li>
+<li>One uses <em>results or resulted in</em> (RiC-R061) to describe the
+outcome of this activity.</li>
+</ul>
+<p>Digitisation, for example, would affect one instantiation (a paper
+document, say) of a record, and result in a second instantiation (an
+electronic file, say) of the same record. Whilst appraisal would affect
+a certain record set, and might result in a new activity affecting the
+same record set, namely its accrual.</p>
+<p>In all such uses of Activity, relations such as <em>is or was
+performed by</em> (RiC-R060), <em>is or was regulated by</em>
+(RiC-R063i), or <em>occurred at date</em> (RiC-R080i), noting that a
+Date (RiC-E18) can very well be a period of time in RiC, will very often
+be used to record important details of the activity.</p>
+<p>Let us turn now to the question of whether one has an Activity or
+only an Event (RiC-E14), the former being a more specific case of the
+latter. In short, it is very likely one has an Activity, and that this
+should be used! It is easy to be a little tricked ordinary language, and
+muse that an appraisal, say, might be more of a one-off event than an
+activity. But RiC-CM stresses that an event may very well be a
+continuous endeavour that lasts a period of time, and the key sentence
+in RiC-CM (in the presentation of RiC-E14) is that an activity is:</p>
+<blockquote>
+<p>an agent-designed and performed event that has an intended purpose or
+purposes.</p>
+</blockquote>
+<p>Almost any aspect of archival practice will likely fall under
+this.</p>
+<p>Any relations with Event as their domain are equally applicable for
+Activity. In particular, this is the case for <em>has or had
+subevent</em> (RiC-R006), which is very useful for, say, relating
+digitisation of a certain record set to digitisation in general.</p>
+<p>A typical use of an event which is not an activity would be in
+connection with <em>is associated with event</em> (RiC-R057i), relating
+a record or record set to a certain moment of history; Lord Halifax’s
+diaries could be connected to the Second World War, for instance. Whilst
+such events themselves are outside the realm of archival practice, they
+very useful for placing a record or record set in a rich thematic
+context that facilitates their discovery.</p>
+</body>
+</html>
