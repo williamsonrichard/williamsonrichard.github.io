@@ -1,0 +1,196 @@
+body {
+  width: 100%;
+  text-align: center;
+  margin: auto;
+  padding-top: 3em;
+  font-family: serif;
+}
+
+h1.title {
+  margin-top: 2.5em;
+  font-size: 3em;
+  color: #228B22;
+}
+
+h2.title-date {
+  margin-top: 3em;
+}
+
+img.left-arrow, img.contents {
+  margin-right: 3em;
+}
+
+img.contents {
+  vertical-align: top;
+}
+
+img.grayscale {
+  filter: grayscale(30%);
+  opacity: 0.5;
+}
+
+img.diagram {
+  margin-top: 2em;
+  width: 100%;
+  max-width: 800px;
+}
+
+div.quote {
+  margin-top: 3em;
+}
+
+div.quote blockquote {
+  display: inline-block;
+  margin-left: 2px;
+  padding-left: 0em;
+  margin-right: 2px;
+  font-size: 1.2em;
+  margin-bottom: 5px;
+  max-width: 50%;
+}
+
+img.left-quote {
+  vertical-align: top;
+}
+
+img.right-quote {
+  vertical-align: bottom;
+}
+
+
+h1.contents-title {
+  margin: auto;
+  padding-left: 2px;
+  padding-right: 2px;
+  margin-top: 1em;
+  color: #228B22;
+}
+
+h2.contents-subtitle {
+  margin: auto;
+  padding-left: 2px;
+  padding-right: 2px;
+  margin-top: 1em;
+}
+
+p.contents-instructions {
+  max-width: 50%;
+  margin: auto;
+  padding-left: 2px;
+  padding-right: 2px;
+  margin-top: 2em;
+}
+
+ul.contents {
+  list-style-type: none;
+  padding-left: 0em;
+  text-align: left;
+  max-width: 50%;
+  text-align: center;
+  margin: auto;
+  margin-top: 2em;
+}
+
+ul.contents li {
+  margin-top: 1em;
+}
+
+
+h1.slide-content {
+  font-size: 2.5em;
+  max-width: 90%;
+  margin: auto;
+  margin-top: 1.5em;
+}
+
+h2.slide-content {
+  max-width: 50%;
+  margin: auto;
+  margin-top: 3em;
+}
+
+h3.slide-content {
+  max-width: 50%;
+  margin: auto;
+  margin-top: 3em;
+}
+
+h4.slide-content {
+  max-width: 50%;
+  margin: auto;
+  margin-top: 3em;
+}
+
+h1.thank-you {
+  color: #702963;
+}
+
+span.quote-origins {
+  font-size: 0.9em;
+}
+
+p.explanation {
+  max-width: 50%;
+  margin: auto;
+  margin-top: 2em;
+}
+
+span.inline-example {
+  margin-right: 3em;
+}
+
+span.strikethrough-1 {
+  position: relative;
+}
+
+span.strikethrough-1:before, span.strikethrough-2:before {
+  position: absolute;
+  content: "";
+  left: -5px;
+  top: 50%;
+  right: -5px;
+  border-top: 1px solid;
+  border-color: inherit;
+  transform:rotate(-45deg);
+}
+
+a {
+  padding-bottom: 1px;
+  border-bottom: 1px solid;
+  text-decoration: none;
+  color: #1F51FF;
+}
+
+a:hover {
+  cursor: pointer;
+}
+
+div.menu a {
+  border-bottom: none;
+}
+
+div.code {
+  font-family: monospace;
+  text-align: left;
+}
+
+div.poem {
+  text-align: left;
+}
+
+@media screen and (max-width: 800px) {
+  h1.slide-content, h2.slide-content, h3.slide-content, h4.slide-content,
+  p.explanation, img.diagram, p.contents-instructions {
+    max-width: 100%;
+    padding-left: 2px;
+    padding-right: 2px;
+  }
+
+  blockquote {
+    max-width: 100%
+  }
+
+  h1.contents-title {
+    margin-top: 0em;
+  }
+}

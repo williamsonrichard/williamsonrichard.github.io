@@ -1,0 +1,73 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.5615.213 Safari/537.36" version="26.0.13">
+  <diagram name="Page-1" id="EY56vloSXYm2YxHtlGjB">
+    <mxGraphModel dx="1597" dy="801" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="4681" pageHeight="3300" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="P0xjAi0XkNNrImmywvyQ-22" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="610" y="90" width="400" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="P0xjAi0XkNNrImmywvyQ-21" value="" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="100" y="90" width="410" height="270" as="geometry" />
+        </mxCell>
+        <mxCell id="P0xjAi0XkNNrImmywvyQ-1" value="Richard" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="130" y="110" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="P0xjAi0XkNNrImmywvyQ-2" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="210" y="149.50000000000023" as="sourcePoint" />
+            <mxPoint x="380" y="149.50000000000023" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P0xjAi0XkNNrImmywvyQ-3" value="hasAddress" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="P0xjAi0XkNNrImmywvyQ-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="P0xjAi0XkNNrImmywvyQ-4" value="Trondheim" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="380" y="110" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="P0xjAi0XkNNrImmywvyQ-5" value="Gard" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="130" y="260" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="P0xjAi0XkNNrImmywvyQ-6" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="210" y="299.5000000000002" as="sourcePoint" />
+            <mxPoint x="380" y="299.5000000000002" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P0xjAi0XkNNrImmywvyQ-7" value="hasAddress" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="P0xjAi0XkNNrImmywvyQ-6">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="P0xjAi0XkNNrImmywvyQ-8" value="Trondheim" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="380" y="260" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="P0xjAi0XkNNrImmywvyQ-11" value="Richard" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="640" y="110" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="P0xjAi0XkNNrImmywvyQ-12" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" target="P0xjAi0XkNNrImmywvyQ-14">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="720" y="149.50000000000023" as="sourcePoint" />
+            <mxPoint x="890" y="149.50000000000023" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P0xjAi0XkNNrImmywvyQ-13" value="hasAddress" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="P0xjAi0XkNNrImmywvyQ-12">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="P0xjAi0XkNNrImmywvyQ-14" value="Trondheim" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="900" y="170" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="P0xjAi0XkNNrImmywvyQ-15" value="Gard" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="640" y="260" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="P0xjAi0XkNNrImmywvyQ-16" value="" style="endArrow=classic;html=1;rounded=0;" edge="1" parent="1" target="P0xjAi0XkNNrImmywvyQ-14">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="720" y="299.5000000000002" as="sourcePoint" />
+            <mxPoint x="890" y="299.5000000000002" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="P0xjAi0XkNNrImmywvyQ-17" value="hasAddress" style="edgeLabel;resizable=0;html=1;;align=center;verticalAlign=middle;" connectable="0" vertex="1" parent="P0xjAi0XkNNrImmywvyQ-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
