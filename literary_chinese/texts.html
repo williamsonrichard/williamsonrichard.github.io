@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  prefix="
+    dc: http://purl.org/dc/terms/
+    litchi-text-name: ontology://literary-chinese/text/name#
+    litchi-text-names: ontology://literary-chinese/text/name/"
+>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Literary Chinese - Texts</title>
+  <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body about="texts.html">
+
+<h1><a class="title" href="index.html">Literary Chinese</a></h1>
+
+<h2 property="dc:title">Texts</h2>
+
+<div rel="dc:tableOfContents" id="textsTableOfContents" class="textsTableOfContents">
+<ul rel="dc:references" inlist>
+  <li resource="texts/%E6%98%93%E7%B6%93.html">
+    <span class="chineseCharacters" data-rdf-subject="litchi-text-names:易經" data-rdf-predicate="litchi-text-name:characters"><a href="texts/%E6%98%93%E7%B6%93.html">易經</a></span>
+    <span xml:lang="zh-Latn-pinyin" class="romanisation" data-rdf-subject="litchi-text-names:易經" data-rdf-predicate="litchi-text-name:romanisation">Yì Jīng</span>
+    (<span xml:lang="zh-Latn" data-rdf-subject="litchi-text-names:易經" data-rdf-predicate="litchi-text-name:otherRomanisation">I Ching</span>)
+  </li>
+
+  <li resource="texts/%E9%81%93%E5%BE%B7%E7%B6%93.html">
+    <span class="chineseCharacters" data-rdf-subject="litchi-text-names:道德經" data-rdf-predicate="litchi-text-name:characters"><a href="texts/%E9%81%93%E5%BE%B7%E7%B6%93.html">道德經</a></span>
+    <span class="romanisation" xml:lang="zh-Latn-pinyin" data-rdf-subject="litchi-text-names:道德經" data-rdf-predicate="litchi-text-name:romanisation">Dào Dé Jīng</span>
+    (<span xml:lang="zh-Latn" data-rdf-subject="litchi-text-names:道德經" data-rdf-predicate="litchi-text-name:otherRomanisation">Tao Te Ching</span>)
+  </li>
+</ul>
+</div>
+
+</body>
+</html>

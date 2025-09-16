@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html
+  lang="en"
+  prefix="
+    dbr: https://dbpedia.org/resource/
+    dc: http://purl.org/dc/terms/
+    deo: http://purl.org/spar/deo/
+    rdf: http://www.w3.org/1999/02/22-rdf-syntax-ns#
+    rdfs: http://www.w3.org/2000/01/rdf-schema#">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Literary Chinese</title>
+  <link rel="stylesheet" href="stylesheet.css">
+</head>
+<body>
+
+<h1 property="dc:title"><a class="title" href="#">Literary Chinese</a></h1>
+
+<div property="dc:isPartOf" resource="" typeof="deo:Introduction" about="#introduction" id="introduction">
+<p>
+<a property="dc:references" resource="dbr:Classical_Chinese" href="https://en.wikipedia.org/wiki/Classical_Chinese">Literary Chinese</a>, variously known as ancient and/or classical Chinese, with <a property="dc:references" resource="dbr:Old_Chinese" href="https://en.wikipedia.org/wiki/Old_Chinese">old Chinese</a> as its precursor, was learnt, read, and studied <a property="dc:references" resource="dbr:Lexicology" href="https://en.wikipedia.org/wiki/Lexicology">lexicologically</a>: meaning came from the characters themselves and their juxtapositions, in the context of the meanings they had acquired through usage in other works — at least those the reader was aware of. This site presents literary Chinese characters in a manner inspired by this, interweaving each of them into a rich texture of texts in which they appear, as well as of etymological and other material.
+</p>
+
+<p>
+The HTML of the entire site is decorated with RDFa attributes, and the underlying semantic data on the characters, texts, and other material, whilst it can be generated from the site itself, is also available directly in RDF or in OWL. We have defined an ontology for literary Chinese, which we make use of throughout.
+</p>
+</div>
+
+<div rel="dc:tableOfContents" id="tableOfContents" class="tableOfContents">
+<ul rel="dc:references" inlist>
+  <li resource="texts.html"><a property="dc:hasPart" about="" href="texts.html">Texts</a></li>
+  <li resource="characters.html"><a property="dc:hasPart" about="" href="characters.html">Characters</a></li>
+</ul>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,201 @@
+body {
+  font-family: sans-serif;
+  padding-left: 2.5%;
+  padding-right: 2.5%;
+  margin: auto;
+  width: 95%;
+}
+
+h1 {
+  font-size: 3em;
+  font-weight: 300;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2em;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 1em;
+}
+
+h2.textTitle {
+  letter-spacing: 0.25em;
+}
+
+h3 {
+  font-size: 1.75em;
+  font-weight: 300;
+}
+
+h4 {
+  font-size: 1.25em;
+  font-weight: 300;
+  margin-bottom: 0.5em;
+  margin-left: 1em;
+}
+
+a {
+  text-decoration: none;
+  padding-bottom: 1px;
+  border-bottom: 1px solid;
+}
+
+a:link {
+  color: #D65D26;
+}
+
+a:visited {
+  color: #E48C65;
+}
+
+a.external:link {
+  color: #FFFF00;
+}
+
+a.external:visited {
+  color: #FFD700;
+}
+
+a.title {
+  color: black;
+  padding-bottom: 0px;
+  border-bottom: 0px;
+}
+
+li {
+  margin-bottom: 2em;
+}
+
+p {
+  line-height: 2em;
+  margin-bottom: 2em;
+}
+
+p.howToReadText {
+  font-size: 0.75em;
+  font-weight: 300;
+  line-height: 1.5em;
+}
+
+div.howToReadText {
+  width: 75%;
+  margin: auto;
+}
+
+div.tableOfContents {
+  text-align: center;
+}
+
+div.tableOfContents ul {
+  list-style-type: none;
+  font-size: 1.25em;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+div.tableOfContents ul li {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+div.textReferences ul {
+  list-style-type: none;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 1em;
+  padding-right: 0;
+}
+
+div.textReferences ul li {
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+}
+
+
+span.chineseCharacters {
+  font-size: 1.5em;
+  letter-spacing: 0.25em;
+}
+
+div.textsTableOfContents ul {
+  list-style-type: none;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+  line-height: 2em;
+}
+
+div.textsTableOfContents span.chineseCharacters {
+  display: inline-block;
+  width: 5em;
+}
+
+div.textsTableOfContents span.romanisation {
+  display: inline-block;
+  width: 8em;
+}
+
+div.textReferences {
+  line-height: 1.75em;
+}
+
+span.textReference {
+  padding-right: 1em;
+}
+
+span.textReferenceAuthor {
+  padding-right: 1em;
+  font-style: italic;
+}
+
+div.chineseText {
+  writing-mode: vertical-rl;
+  text-orientation: upright;
+  font-size: 1.5em;
+}
+
+div.chineseText p {
+  line-height: 1em;
+  letter-spacing: 0.2em;
+}
+
+div.textFrontMatter ul {
+  list-style-type: none;
+  margin-left: 1em;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+  line-height: 1em;
+}
+
+span.textFrontMatterKey {
+  margin-right: 1em;
+}
+
+span.textFrontMatterValue {
+  font-style: italic;
+}
+
+div.textualNotes {
+  margin-left: 1em;
+}
+
+div.chineseText a.character {
+  text-decoration: none;
+  border-bottom: none;
+  color: currentColor;
+}
+
+@media (min-width: 800px) {
+  body {
+    width: 800px;
+  }
+}

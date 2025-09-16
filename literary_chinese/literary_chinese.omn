@@ -1,0 +1,63 @@
+Prefix: rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#>
+Prefix: rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+
+Prefix: : <ontology://literary-chinese#>
+Prefix: character <ontology://literary-chinese/character#>
+Prefix: text <ontology://literary-chinese/text#>
+Prefix: text-name <ontology://literary-chinese/text/name#>
+
+
+Ontology: <ontology://literary-chinese> <ontology://literary-chinese/0.1>
+  Annotations:
+    rdfs:label "Ontology for Literary Chinese"@en
+    rdfs:comment "The ontology and version IRIs are not intended to be dereferenceable: they are intended to be independent of whichever URLs are used to host the ontology"@en
+
+Class: Text
+  Annotations:
+    rdfs:label "Literary Chinese texts"@en
+
+Class: text:Name
+  Annotations:
+    rdfs:label "Name of a text (in the original Literary Chinese)"@en
+    rdfs:comment "Represents all aspects of a name: the characters which comprise it; its romanisation; etc"@en
+
+ObjectProperty: text:hasName
+  Annotations:
+    rdfs:label "Name of a text"@en
+  Domain: Text
+  Range: text:Name
+
+DataProperty: text-name:characters
+  Annotations:
+    rdfs:label "The characters which make up the name of a text (juxtaposed from left to right)"@en
+  Domain: text:Name
+  Range: rdf:PlainLiteral
+
+DataProperty: text-name:romanisation
+  Annotations:
+    rdfs:label "The romanisation of the name of a text according to the Chinese phonetic alphabet scheme (Hanyu Pinyin)"@en
+    rdfs:comment "Accents are always to be included in the romanisation, so that one can read off the pronunciation"@en
+  Domain: text:Name
+  Range: rdf:PlainLiteral
+
+DataProperty: text-name:otherRomanisation
+  Annotations:
+    rdfs:label "A romanisation of the name of a text which is different to that of the Chinese phonetic alphabet scheme"@en
+    rdfs:comment "Especially intended for romanisations which are widely used/known"@en
+  Domain: text:Name
+  Range: rdf:PlainLiteral
+
+Class: Character
+  Annotations:
+    rdfs:label "Literary Chinese characters"@en
+
+DataProperty: character:logogram
+  Annotations:
+    rdfs:label "The character itself as a logogram, i.e. in its primary written (visual) form"@en
+  Range: rdf:PlainLiteral
+
+DataProperty: character:romanisation
+  Annotations:
+    rdfs:label "The romanisation of a character according to the Chinese phonetic alphabet scheme (Hanyu Pinyin)"@en
+    rdfs:comment "Accents are always to be included in the romanisation, so that one can read off the pronunciation"@en
+  Range: rdf:PlainLiteral
