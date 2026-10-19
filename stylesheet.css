@@ -1,4 +1,8 @@
-body{font-family: sans-serif; padding-left: 0.5em; width: 55%;}
+body{
+  font-family: sans-serif;
+  padding-left: 0.5em;
+  max-width: 700px;
+}
 
 h1{font-size: 1.2em; font-weight: normal; padding-left: 0em; padding-top: 0em; margin-top: 0em; margin-left: 0em;}
 h2{font-size: 1.1em; font-weight: normal; padding-left: 0em; margin-left: 0em;}
@@ -30,3 +34,11 @@ table.noborderspacing{border-spacing: 0em;}
 
 ul{list-style-type:none; padding-left: 1em;}
 li{margin-bottom: 1em;}
+
+ul.flat {
+  padding-left: 0em;
+}
+
+h2.frontmatter {
+  margin-top: 1.5em;
+}
