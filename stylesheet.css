@@ -42,3 +42,11 @@ ul.flat {
 h2.frontmatter {
   margin-top: 1.5em;
 }
+
+ul.email-addresses {
+  padding-left: 0em;
+}
+
+span.email {
+  font-weight: normal;
+}
